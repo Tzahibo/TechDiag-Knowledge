@@ -1,2 +1,2 @@
 # The newest TechDiag knowledge pack in this folder. TECHDIAG-UPDATE.exe reads this line.
-PACK | TechDiag-Knowledge-18-11-2026.zip | 18/11/2026 | 2a1ab706997dc4cc76f06de8a3885801a59fb05f53b39d3b1a3ec7ac3e611ff0
+PACK | TechDiag-Knowledge-18-11-2026.zip | 18/11/2026 | d56d46bfd07d4cbc2edcf33ceb20bf8bc039ccc686ec8f36342c152a7f92e3dc

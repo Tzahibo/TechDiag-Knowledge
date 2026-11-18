@@ -223,6 +223,7 @@ KB    | KB5040442  | PROBLEM | BitLocker can ask for the recovery key when the P
 KB    | KB5040431  | PROBLEM | BitLocker can ask for the recovery key when the PC starts | Install KB5041592 or a newer update
 KB    | KB5034765  | CHECK   | Its install can stop at 96 percent with code 0x800F0922 and roll back | Install KB5035853 or a newer update
 KB    | KB5034848  | CHECK   | Its install can stop at 96 percent with code 0x800F0922 and roll back | Install KB5035853 or a newer update
+KB    | KB5089549  | CHECK   | Its install can fail with code 0x800F0922 when the EFI partition has little free space | Install KB5089573 or a newer update
 #
 # ---- table builds | ms-release-info | 13/11/2026
 # The builds of Windows 11 and their KB numbers (added by the knowledge pack). Facts only - no sentence of the page.
