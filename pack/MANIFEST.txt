@@ -1,10 +1,10 @@
 # MANIFEST.txt - what is in this TechDiag knowledge pack. Made By Tzahi Bocal. Data only - nothing in it is run.
 # TECHDIAG-UPDATE.exe installs a pack only when every file of it is here, by its size and SHA-256.
 PACK | TechDiag knowledge pack | 18/11/2026
-FILE | TechDiag/TECHDIAG-LIST.txt | 786089 | a5a69b3178ad1eb70593e6515f22efb2097c76694da42868af4309af994ea6df
-FILE | TechDiag/Knowledge/RULES-VENDOR.txt | 24978 | 6d0f70d278bb4dbca082a6a580c193d3455225c5f919395114b09616a81553f1
+FILE | TechDiag/TECHDIAG-LIST.txt | 786138 | 9b8adef1ea7db6e5143c901bfbe20b4f1ecaafac7d5828cfc38b90f3ac13031b
+FILE | TechDiag/Knowledge/RULES-VENDOR.txt | 26706 | a536f5438a80e55b7b2f749dff46baa0e2c72bd0cad44368b25b7d8bd01c4542
 FILE | TechDiag/Knowledge/TABLES.txt | 35873 | 6232167f8d228f8653b0b44cede8241fcbeb7f3344bd1593fc97f0ae04e6e52c
-FILE | TechDiag/Knowledge/DIAG-CODES.txt | 47815 | 766c8b77151430468d749dd3aff8429f9d70c03fd3736da1dc68dac9f3bf5f47
+FILE | TechDiag/Knowledge/DIAG-CODES.txt | 52809 | 96d21f66d182f5316228c646e2e08efcf8777049110d6fdc0aebc1df1732ae6d
 FILE | TechDiag/Knowledge/SOURCES.txt | 2270 | bf3a9ef63941d3d9a808d4cffc24100c9b0f21413a01e0ff6cc4e4f484b25180
 FILE | README-KNOWLEDGE.md | 1261 | 4946984c1cde732a3739edcdebbb61c309ceca76fac599e96bf4df22d03e1c0f
-FILE | SHA256SUMS.txt | 580 | 12a210c9cf34337fe0ac8bae48596538d732f233cad924a8068b2b33d84ea087
+FILE | SHA256SUMS.txt | 580 | 92717dc55c4aeccd1edde9488a49f93309ba71a28f259c2c5c8a553cf21d2f0d
