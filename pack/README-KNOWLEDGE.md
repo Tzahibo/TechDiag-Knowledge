@@ -1,0 +1,17 @@
+# TechDiag - knowledge pack
+
+Data files for TechDiag, a read-only diagnostic tool for Windows 11 PCs of Dell and HP that do not start.
+Nothing here is a program and nothing here is run: plain text that TechDiag reads.
+
+- `TechDiag-Knowledge-<DD-MM-YYYY>.zip` - the pack. Put it beside `TECHDIAG-UPDATE.exe` and double-click the program:
+  it checks every file against `MANIFEST.txt` (size and SHA-256) and installs the knowledge.
+- `pack/` - the same files, unpacked, to read.
+
+What is in it: known problems of Windows updates and the update that fixes each, the builds of Windows 11 and their
+KB numbers, Windows error and stop codes, cases the makers themselves documented (Microsoft, Dell, HP, Intel) and the
+makers' diagnostic codes. Every line comes from the maker's own public page.
+
+What is never in it: anything of an organization - no PC names, users, serial numbers, logs or internal rules.
+
+Lines under "added by the night watch" in the list were found and checked by an automatic nightly job: each is a
+CHECK (never a PROBLEM) with the update Microsoft names as the fix.

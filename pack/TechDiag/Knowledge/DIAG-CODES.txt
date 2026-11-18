@@ -1,0 +1,414 @@
+# DIAG-CODES.txt - the makers' hardware-test codes and light / beep codes, for TECHDIAG /code (K22).
+# Made By Tzahi Bocal.
+# Its place: <home>\TechDiag\Knowledge\DIAG-CODES.txt. It is data only - nothing in it is run.
+# Written by tools/mk_diagcodes.py from first-hand reads of the makers' pages - do not edit by hand.
+#
+#   DATE  | the date of this file (DD/MM/YYYY)
+#   TABLE | id | maker | kind | title | covers | document id | version (- = none given) | DD/MM/YYYY | URL
+#   NOTE  | table id | a line shown under the title (at most 4 per table)
+#   CODE  | table id | code | what it means | what to do (- = the maker gives no step for it)
+# kind: TEST (2000-0142), LIGHT (2,3), COUNT (3), BEEP (1-3-2), LIST (named rows: TECHDIAG /code hp tests).
+#
+# The code, the part it points to and the maker's step are the makers' facts. Every sentence is TechDiag's own
+# words - the makers' terms forbid copying their text. Two tables are never merged: a code in two tables is
+# shown under each table's own title (the model generation matters).
+DATE | 13/11/2026
+
+TABLE | DELL-EPSA | Dell | TEST | Dell hardware test codes (ePSA and PSA) | Dell PCs with Dell's pre-boot hardware test - Dell's list names OptiPlex, Inspiron, Vostro, XPS, Alienware, Dell Pro and more | 000181167 | 25 | 03/09/2026 | https://www.dell.com/support/kbdoc/en-us/000181167
+NOTE | DELL-EPSA | Still the same code after these steps: enter it on Dell's online test page.
+CODE | DELL-EPSA | 2000-0111 | The processor test stopped on an error (the system board). | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0112 | The processor reported a hardware error (the system board). | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0114 | The processor test failed (the system board). | Update the BIOS, test again. Check that air flows freely.
+CODE | DELL-EPSA | 2000-0115 | The processor got too hot during the test. | Clean the air vents. Update the BIOS, then test again.
+CODE | DELL-EPSA | 2000-0121 | Memory errors were found, and the PC corrected them. | Reseat the memory, then try one module at a time.
+CODE | DELL-EPSA | 2000-0122 | Many memory errors were found. | Reseat the memory, then try one module at a time.
+CODE | DELL-EPSA | 2000-0123 | The memory test found an error. | Reseat the memory, then try one module at a time.
+CODE | DELL-EPSA | 2000-0124 | Information only: a line of the test's own log. | Clear the test's log, then run the test again.
+CODE | DELL-EPSA | 2000-0125 | The test's event log is full. | Clear the log, then run the test again.
+CODE | DELL-EPSA | 2000-0126 | An event log must be cleared before the test goes on. | Clear the log, then run the test again.
+CODE | DELL-EPSA | 2000-0128 | Part of the memory does not work - the message names the slot. | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0131 | No battery was found. | Update the BIOS. Reseat the battery if it comes out.
+CODE | DELL-EPSA | 2000-0132 | The battery is near the end of its life. | Update the BIOS. Reseat the battery if it comes out.
+CODE | DELL-EPSA | 2000-0133 | The battery cannot give enough power. | Update the BIOS. Reseat the battery. Still failing: Dell support.
+CODE | DELL-EPSA | 2000-0134 | The battery is past its limit of charge cycles. | Update the BIOS. Reseat the battery if it comes out.
+CODE | DELL-EPSA | 2000-0135 | The battery is not a Dell battery, or the charging looks wrong. | Use a Dell battery. Connect the charger, then run the test again.
+CODE | DELL-EPSA | 2000-0137 | The charging looks wrong. | Connect the charger, then run the test again.
+CODE | DELL-EPSA | 2000-0141 | No hard disk was found. | Reconnect the disk. Update the BIOS and the disk firmware.
+CODE | DELL-EPSA | 2000-0142 | The disk failed its own self-test. | Update the BIOS and disk firmware. Reconnect the disk.
+CODE | DELL-EPSA | 2000-0143 | The disk's health record could not be read (SMART). | Update the BIOS and disk firmware. Reconnect the disk.
+CODE | DELL-EPSA | 2000-0144 | The disk cannot run a self-test. | Update the BIOS and disk firmware. Check the disk is the original.
+CODE | DELL-EPSA | 2000-0145 | The disk self-test did not finish. | Update the BIOS and disk firmware. Reconnect the disk.
+CODE | DELL-EPSA | 2000-0146 | The disk's self-test record holds earlier errors. | Update the BIOS and disk firmware. Check the disk or reinstall.
+CODE | DELL-EPSA | 2000-0147 | The CD or DVD drive failed its test. | Update the BIOS. Reconnect the CD or DVD drive, test again.
+CODE | DELL-EPSA | 2000-0148 | The CD or DVD drive gave a wrong status (now 2000-0152). | Update the BIOS. Reconnect the CD or DVD drive, test again.
+CODE | DELL-EPSA | 2000-0149 | No CD or DVD drive was found. | Update the BIOS. Reconnect the CD or DVD drive, test again.
+CODE | DELL-EPSA | 2000-0150 | No hard disk was found. | Reconnect the disk to the system board. Update the BIOS.
+CODE | DELL-EPSA | 2000-0151 | The disk warns that it is about to fail (SMART). | Reconnect the disk. Update the BIOS, then test again.
+CODE | DELL-EPSA | 2000-0152 | The CD or DVD drive gave a wrong status. | Update the BIOS. Remove and refit the CD or DVD drive.
+CODE | DELL-EPSA | 2000-0153 | A removable disk gave a wrong status. | Reseat its connections. Update the BIOS, then test again.
+CODE | DELL-EPSA | 2000-0154 | The tape drive gave a wrong status. | Update the BIOS. Remove and refit the tape drive.
+CODE | DELL-EPSA | 2000-0155 | No disk is fitted, and this laptop needs one. | Update the BIOS. Reconnect the disk to the system board.
+CODE | DELL-EPSA | 2000-0156 | The disk failed the read test. | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0161 | The SSD on the board (NVMe disk) was not found. | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0212 | The settings memory of the board failed (CMOS). | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0213 | The coin battery of the board failed (CMOS battery). | Replace the coin battery. Update the BIOS, test again.
+CODE | DELL-EPSA | 2000-0221 | A timer of the system board does not work. | Update the BIOS. Reseat the coin battery, then test again.
+CODE | DELL-EPSA | 2000-0222 | A timer of the system board does not work. | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0223 | A timer of the system board gave a wrong signal. | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0224 | A timer of the system board ran at a wrong rate. | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0231 | A timer of the system board failed. | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0232 | The clock of the system board did not tick. | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0233 | The clock of the system board does not count seconds. | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0234 | A clock or timer of the system board is wrong. | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0241 | The system board failed a start-up check (A20 gate). | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0242 | The system board did not see an expected signal (IRQ). | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0243 | A USB device, or a USB port of the board, failed. | Unplug USB devices. Update the BIOS, then test again.
+CODE | DELL-EPSA | 2000-0244 | A USB device failed. | Unplug USB devices. Update the BIOS, then test again.
+CODE | DELL-EPSA | 2000-0245 | A USB device did not answer. | Unplug USB devices. Update the BIOS, then test again.
+CODE | DELL-EPSA | 2000-0251 | The BIOS event log holds failed records (servers only). | Clear the BIOS event log. Update the BIOS, test again.
+CODE | DELL-EPSA | 2000-0261 | Data errors on the board - more than one memory module failed. | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0313 | The touchpad or pointing stick was not found. | Reconnect it. Check in the BIOS that it is turned on.
+CODE | DELL-EPSA | 2000-0314 | A heat reading is over its limit. | Check the fan and clean the air vents. Update the BIOS.
+CODE | DELL-EPSA | 2000-0315 | A sensor reading is lower than expected. | Check the air vents. Update the BIOS, then test again.
+CODE | DELL-EPSA | 2000-0321 | The built-in screen was not detected. | Reconnect the screen cable. Update the BIOS, test again.
+CODE | DELL-EPSA | 2000-0322 | The screen brightness could not be changed. | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0323 | The screen backlight status could not be read. | Reconnect the screen cable. Update the BIOS, test again.
+CODE | DELL-EPSA | 2000-0324 | In the screen color test, the answer given was No. | Run the screen test again. Answer Yes if the colors look right.
+CODE | DELL-EPSA | 2000-0325 | In the screen color test, no answer was given. | Run the screen test again. Answer Yes if the colors look right.
+CODE | DELL-EPSA | 2000-0326 | The screen backlight could not be turned on or off. | Reconnect the screen cable. Update the BIOS, test again.
+CODE | DELL-EPSA | 2000-0327 | The screen does not show the BIOS screen right. | Reconnect the screen cable. Update the BIOS, test again.
+CODE | DELL-EPSA | 2000-0328 | The light sensor of the screen did not react. | Reconnect the screen cable. Update the BIOS, test again.
+CODE | DELL-EPSA | 2000-0331 | No graphics card or chip was found. | Update the BIOS. Desktop: reseat the graphics card.
+CODE | DELL-EPSA | 2000-0332 | The graphics memory test failed. | Update the BIOS. Reseat the memory, then test again.
+CODE | DELL-EPSA | 2000-0333 | In the graphics test, no answer was given. | Run the test again and answer when it asks.
+CODE | DELL-EPSA | 2000-0334 | In the graphics test, the answer given was No. | Run the test again. Answer Yes if the pattern looks right.
+CODE | DELL-EPSA | 2000-0411 | A cable was not detected - the message names it. | Reconnect the cable it names. Replace it if it is damaged.
+CODE | DELL-EPSA | 2000-0412 | A cable, or an extra cable, was not detected. | Reconnect the cable it names. Replace it if it is damaged.
+CODE | DELL-EPSA | 2000-0413 | The screen cable was not detected. | Reconnect the screen cable. Replace it if it is damaged.
+CODE | DELL-EPSA | 2000-0414 | The screen power cable (inverter cable) was not detected. | Reconnect the cable. Replace it if it is damaged.
+CODE | DELL-EPSA | 2000-0415 | A cable, jumper or sensor needs a check - the message names it. | Reconnect what it names. Replace it if it is damaged.
+CODE | DELL-EPSA | 2000-0501 | A fan failed its test. | Clean the air vents. Update the BIOS, then test again.
+CODE | DELL-EPSA | 2000-0511 | A fan did not respond. | Check that nothing blocks the fan. Clean the air vents.
+CODE | DELL-EPSA | 2000-0512 | A fan runs faster than it should. | Check for loose connections. Clean the air vents.
+CODE | DELL-EPSA | 2000-0620 | The network adapter failed its test. | Check the cable and the port pins. Update the BIOS.
+CODE | DELL-EPSA | 2000-0621 | The firmware of the network adapter is old. | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0711 | The PC shut itself down from heat more than once. | Clean the air vents. Update the BIOS, then test again.
+CODE | DELL-EPSA | 2000-0712 | The BIOS could not set the fan speed. | Clean the air vents. Update the BIOS, then test again.
+CODE | DELL-EPSA | 2000-0713 | The heat sensor could not be read. | Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0714 | The heat sink clip is not fitted. | Turn off the PC and fit the heat sink clip.
+CODE | DELL-EPSA | 2000-0715 | The BIOS could not set up a memory module. | Update the BIOS. Reseat the memory, then test again.
+CODE | DELL-EPSA | 2000-0716 | A cable is not connected - the message names it. | Connect the cable it names. Update the BIOS, test again.
+CODE | DELL-EPSA | 2000-0721 | The battery does not work right. | Update the BIOS. Refit the battery, charge it, then test again.
+CODE | DELL-EPSA | 2000-0722 | At an earlier start, a memory error could not be corrected. | Update the BIOS. Reseat the memory, then test again.
+CODE | DELL-EPSA | 2000-0723 | The BIOS found a disk problem. | Check the disk's connection. Update the BIOS, test again.
+CODE | DELL-EPSA | 2000-0800 | No response from the touchscreen. | Restart. Update the BIOS, then run the test again.
+CODE | DELL-EPSA | 2000-0901 | No response from the fingerprint reader. | Update the BIOS and the fingerprint driver, then test again.
+CODE | DELL-EPSA | 2000-0941 | No response from the smart card reader. | Update the BIOS and the smart card driver, then test again.
+
+TABLE | DELL-LAT-LIGHT | Dell | LIGHT | Dell Latitude laptops - battery light, amber then white blinks | Latitude laptops, models Dell ships now (Dell's page also names its Dell Pro laptops) | 000131044 | 16 | 28/10/2026 | https://www.dell.com/support/kbdoc/en-us/000131044
+NOTE | DELL-LAT-LIGHT | First number: amber blinks. Second number: white blinks.
+NOTE | DELL-LAT-LIGHT | Dell's table names the part only - contact Dell support with the code.
+CODE | DELL-LAT-LIGHT | 2,1 | The processor may have failed. | -
+CODE | DELL-LAT-LIGHT | 2,2 | The system board failed, or the BIOS is damaged. | -
+CODE | DELL-LAT-LIGHT | 2,3 | No memory was found. | -
+CODE | DELL-LAT-LIGHT | 2,4 | The memory failed. | -
+CODE | DELL-LAT-LIGHT | 2,5 | The memory fitted is of a kind this PC does not take. | -
+CODE | DELL-LAT-LIGHT | 2,6 | The system board or its chipset failed. | -
+CODE | DELL-LAT-LIGHT | 2,7 | The built-in screen failed. | -
+CODE | DELL-LAT-LIGHT | 3,1 | The coin battery of the board failed (CMOS battery). | -
+CODE | DELL-LAT-LIGHT | 3,2 | A card or the graphics chip failed (PCI or video). | -
+CODE | DELL-LAT-LIGHT | 3,3 | BIOS recovery: no recovery image was found. | -
+CODE | DELL-LAT-LIGHT | 3,4 | BIOS recovery: the recovery image found is damaged. | -
+
+TABLE | DELL-LAT-TABBEEP | Dell | COUNT | Dell Latitude tablets - beeps | Latitude tablets | 000131044 | 16 | 28/10/2026 | https://www.dell.com/support/kbdoc/en-us/000131044
+NOTE | DELL-LAT-TABBEEP | Dell's table names the part only - contact Dell support with the code.
+CODE | DELL-LAT-TABBEEP | 1 | The BIOS chip failed its check - Dell points to the system board. | -
+CODE | DELL-LAT-TABBEEP | 2 | No memory was found. | -
+CODE | DELL-LAT-TABBEEP | 3 | A system board part failed (chipset, clock or keyboard chip). | -
+CODE | DELL-LAT-TABBEEP | 4 | The memory failed a read or write. | -
+CODE | DELL-LAT-TABBEEP | 5 | The board's clock lost power (CMOS battery). | Reseat the coin battery cable. Still failing: battery or board.
+CODE | DELL-LAT-TABBEEP | 6 | The graphics card or chip failed its check. | -
+CODE | DELL-LAT-TABBEEP | 7 | The processor failed its cache check. | -
+CODE | DELL-LAT-TABBEEP | 8 | The built-in screen failed. | -
+
+TABLE | DELL-LAT-TABLED | Dell | COUNT | Dell Latitude tablets - power button light blinks | Latitude tablets | 000131044 | 16 | 28/10/2026 | https://www.dell.com/support/kbdoc/en-us/000131044
+NOTE | DELL-LAT-TABLED | Dell's table names the part only - contact Dell support with the code.
+CODE | DELL-LAT-TABLED | 1 | The BIOS chip failed - Dell points to the system board. | -
+CODE | DELL-LAT-TABLED | 2 | No memory was found. | -
+CODE | DELL-LAT-TABLED | 3 | A system board part failed (chipset, clock or keyboard chip). | -
+CODE | DELL-LAT-TABLED | 4 | The memory failed. | -
+CODE | DELL-LAT-TABLED | 5 | The board's clock failed (CMOS battery). | Reseat the coin battery cable. Still failing: battery or board.
+CODE | DELL-LAT-TABLED | 6 | The graphics card or chip failed its check. | -
+CODE | DELL-LAT-TABLED | 7 | The processor failed. | -
+CODE | DELL-LAT-TABLED | 8 | The built-in screen failed. | -
+
+TABLE | DELL-OPX-2020 | Dell | LIGHT | Dell OptiPlex, models of 2020-2025 - power light, amber blinks | OptiPlex desktops and All-in-Ones of Dell's 2020 to 2025 series | 000126021 | 21 | 19/04/2026 | https://www.dell.com/support/kbdoc/en-us/000126021
+NOTE | DELL-OPX-2020 | First number: blinks before the short pause. Second: blinks after it.
+NOTE | DELL-OPX-2020 | Dell: these lights show how far the start got - not which part failed.
+CODE | DELL-OPX-2020 | 1,1 | The board self-test did not find the TPM security chip. | Contact Dell support.
+CODE | DELL-OPX-2020 | 1,2 | The BIOS flash chip may have failed, cannot recover (SPI flash). | Contact Dell support.
+CODE | DELL-OPX-2020 | 1,5 | The board controller could not program a fuse (i-Fuse). | Contact Dell support.
+CODE | DELL-OPX-2020 | 1,6 | The embedded controller of the board hit an internal error. | Unplug all power, then hold the power button to drain it.
+CODE | DELL-OPX-2020 | 2,1 | The processor may have failed. | Run Intel's processor test. Still failing: Dell support.
+CODE | DELL-OPX-2020 | 2,2 | The system board, the power supply or its cables may have failed. | Update the BIOS. Still failing: contact Dell support.
+CODE | DELL-OPX-2020 | 2,3 | No memory was found. | Reseat the memory. Try a module that is known to work.
+CODE | DELL-OPX-2020 | 2,4 | The memory may have failed. | Try a memory module known to work. Still failing: Dell support.
+CODE | DELL-OPX-2020 | 2,5 | The memory fitted is of a kind this PC does not take. | Try a memory module known to work. Still failing: Dell support.
+CODE | DELL-OPX-2020 | 2,6 | The system board or its chipset may have failed. | Update the BIOS. Still failing: contact Dell support.
+CODE | DELL-OPX-2020 | 2,7 | The BIOS reported a screen failure. | Update the BIOS. Still failing: contact Dell support.
+CODE | DELL-OPX-2020 | 2,8 | A power line of the screen may have failed. | Contact Dell support.
+CODE | DELL-OPX-2020 | 3,1 | The coin battery of the board may have failed (CMOS battery). | Try a coin battery known to work. Still failing: Dell support.
+CODE | DELL-OPX-2020 | 3,2 | A card or the graphics chip may have failed (PCI or video). | Contact Dell support.
+CODE | DELL-OPX-2020 | 3,3 | BIOS recovery: no recovery image was found. | Update the BIOS. Still failing: contact Dell support.
+CODE | DELL-OPX-2020 | 3,4 | BIOS recovery: the recovery image found is damaged. | Update the BIOS. Still failing: contact Dell support.
+CODE | DELL-OPX-2020 | 3,5 | A power line of the board may have failed when it was turned on. | Contact Dell support.
+CODE | DELL-OPX-2020 | 3,6 | An error in a part of the BIOS flash chip (SPI volume). | Update the BIOS. Still failing: contact Dell support.
+CODE | DELL-OPX-2020 | 3,7 | The management chip of the board did not answer (ME). | Contact Dell support.
+CODE | DELL-OPX-2020 | 4,1 | A power line of the memory may have failed. | Contact Dell support.
+CODE | DELL-OPX-2020 | 4,2 | The processor power cable is not connected right. | Run the power supply self-test (PSU BIST), then Dell support.
+
+TABLE | DELL-OPX-2012 | Dell | LIGHT | Dell OptiPlex, models of 2012-2020 - power light, amber blinks | OptiPlex of Dell's 2012 to 2020 series - no diagnostic lights on the front | 000126021 | 21 | 19/04/2026 | https://www.dell.com/support/kbdoc/en-us/000126021
+NOTE | DELL-OPX-2012 | First number: blinks before the short pause. Second: blinks after it.
+NOTE | DELL-OPX-2012 | Dell: these lights show how far the start got - not which part failed.
+CODE | DELL-OPX-2012 | 2,1 | The system board may have failed. | Replace the system board.
+CODE | DELL-OPX-2012 | 2,2 | The system board, the power supply or its cables may have failed. | Run the power supply self-test. Reseat its cables.
+CODE | DELL-OPX-2012 | 2,3 | The system board, the memory or the processor may have failed. | Reseat the memory. Try a module that is known to work.
+CODE | DELL-OPX-2012 | 2,4 | The coin battery of the board may have failed. | Try a coin battery known to work, then replace it.
+CODE | DELL-OPX-2012 | 2,5 | The BIOS check failed - the PC is in BIOS recovery mode. | Update the BIOS. Still failing: replace the system board.
+CODE | DELL-OPX-2012 | 2,6 | The processor may have failed. | Fit a new processor.
+CODE | DELL-OPX-2012 | 2,7 | The memory may have failed. | Reseat the memory. Try modules that are known to work.
+CODE | DELL-OPX-2012 | 3,1 | A card on the board or the graphics may have failed (PCI). | Remove the cards one at a time to find the failed one.
+CODE | DELL-OPX-2012 | 3,2 | The graphics may have failed. | Remove graphics cards one at a time to find the failed one.
+CODE | DELL-OPX-2012 | 3,3 | No memory was found. | Remove memory modules one at a time to find the failed one.
+CODE | DELL-OPX-2012 | 3,4 | The disks or their controller may have failed. | Disconnect the disks one at a time to find the failed one.
+CODE | DELL-OPX-2012 | 3,5 | The memory setup is wrong, or the modules do not match. | Remove modules one at a time. Try other combinations.
+CODE | DELL-OPX-2012 | 3,6 | The system board may have failed. | Remove board parts one at a time. None failed: replace the board.
+CODE | DELL-OPX-2012 | 3,7 | The memory may have failed, or the modules do not match. | Remove modules one at a time. None failed: replace the board.
+
+TABLE | DELL-BIOSREC | Dell | LIGHT | Dell desktops on Dell's BIOS recovery list - power light, amber blinks | OptiPlex 3060, 5060, 7060, 3070, 5070, 7070, 3080, 5080, 7080, Precision 3440, Alienware R5 to R11, XPS 8910, 8920, 8930, Vostro 3690, 3890, 5890, Inspiron 3891 and AIO 5400, 5401, 7700 | 000130691 | 28 | 16/09/2026 | https://www.dell.com/support/kbdoc/en-us/000130691
+NOTE | DELL-BIOSREC | On these models Dell reads 3,6 and 3,7 as a damaged BIOS.
+CODE | DELL-BIOSREC | 3,6 | The BIOS is damaged. | Recover the BIOS from a USB drive, with Dell's recovery steps.
+CODE | DELL-BIOSREC | 3,7 | The BIOS is damaged. | Recover the BIOS from a USB drive, with Dell's recovery steps.
+
+TABLE | DELL-OPX-BEEP | Dell | BEEP | Dell OptiPlex desktops - beep codes | OptiPlex desktops - since 2012 (7010, 9010 and later) only the memory code 1-3-2 | 000124349 | 18 | 19/04/2026 | https://www.dell.com/support/kbdoc/en-us/000124349
+NOTE | DELL-OPX-BEEP | OptiPlex models since 2012 beep only 1-3-2: a memory problem.
+NOTE | DELL-OPX-BEEP | Reseating the memory modules may clear it.
+CODE | DELL-OPX-BEEP | 1-1-2 | The processor failed a register check. | Contact Dell support.
+CODE | DELL-OPX-BEEP | 1-1-3 | The settings memory failed (NVRAM). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 1-1-4 | The BIOS chip failed its check. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 1-2-1 | A timer of the board failed. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 1-2-2 | The memory access controller of the board did not start (DMA). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 1-2-3 | A memory access check of the board failed (DMA page). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 1-3-1 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 1-3-2 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 1-3-3 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 1-3-4 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 1-4-1 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 1-4-2 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 1-4-3 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 1-4-4 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-1-1 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-1-2 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-1-3 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-1-4 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-2-1 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-2-2 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-2-3 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-2-4 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-3-1 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-3-2 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-3-3 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-3-4 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-4-1 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-4-2 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-4-3 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 2-4-4 | The memory modules are not seen, or not used right. | Check the memory modules and their slots.
+CODE | DELL-OPX-BEEP | 3-1-1 | The second memory access controller failed (DMA). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 3-1-2 | The first memory access controller failed (DMA). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 3-1-3 | The first signal controller of the board failed (interrupt mask). | Contact Dell support.
+CODE | DELL-OPX-BEEP | 3-1-4 | The second signal controller of the board failed (interrupt mask). | Contact Dell support.
+CODE | DELL-OPX-BEEP | 3-2-2 | Loading the signal table of the board failed (interrupts). | Contact Dell support.
+CODE | DELL-OPX-BEEP | 3-2-4 | The keyboard controller failed its check. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 3-3-1 | The settings memory lost power (NVRAM). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 3-3-2 | The settings memory holds wrong settings (NVRAM). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 3-3-4 | The graphics memory failed its check. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 3-4-1 | The screen could not be set up. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 3-4-2 | The screen refresh check failed. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 3-4-3 | The graphics BIOS was not found. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 4-2-1 | The timer of the board does not tick. | Contact Dell support.
+CODE | DELL-OPX-BEEP | 4-2-2 | A shutdown check failed. | Contact Dell support.
+CODE | DELL-OPX-BEEP | 4-2-3 | A memory access gate failed (A20 gate). | Contact Dell support.
+CODE | DELL-OPX-BEEP | 4-2-4 | An unexpected signal stopped the start (protected mode). | Contact Dell support.
+CODE | DELL-OPX-BEEP | 4-3-1 | The memory failed above the first 64 KB. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 4-3-3 | A timer chip failed (counter two). | Contact Dell support.
+CODE | DELL-OPX-BEEP | 4-3-4 | The clock of the board stopped. | Contact Dell support.
+CODE | DELL-OPX-BEEP | 4-4-1 | A serial or parallel port failed its check. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 4-4-2 | Code could not be unpacked into memory. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 4-4-3 | The math processor failed its check. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-OPX-BEEP | 4-4-4 | The processor cache failed its check. | Run the Dell hardware test (F12, then Diagnostics).
+
+TABLE | DELL-PREC-BEEP | Dell | BEEP | Dell Precision desktops - beep codes | Precision desktop workstations - newer models only the memory code 1-3-2 | 000124349 | 18 | 19/04/2026 | https://www.dell.com/support/kbdoc/en-us/000124349
+NOTE | DELL-PREC-BEEP | Newer models beep only 1-3-2: a memory problem.
+NOTE | DELL-PREC-BEEP | The beeps tell which start-up check stopped: it failed or did not end.
+CODE | DELL-PREC-BEEP | 1-1-2 | The processor check stopped. | Contact Dell support.
+CODE | DELL-PREC-BEEP | 1-1-3 | The settings memory check stopped (CMOS). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 1-1-4 | The BIOS chip check stopped. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 1-2-1 | The timer check stopped. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 1-2-2 | The memory access controller check stopped (DMA). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 1-2-3 | A memory access check stopped (DMA page). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 1-3-1 | The memory refresh check stopped. | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 1-3-2 | The first memory check stopped (the first 64 KB). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 1-3-3 | The first 64 KB of memory failed (a chip or a data line). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 1-3-4 | The first 64 KB of memory failed (odd and even check). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 1-4-1 | The first 64 KB of memory failed (an address line). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 1-4-2 | The first 64 KB of memory failed its parity check. | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 1-4-3 | The fail-safe timer check stopped. | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 1-4-4 | The check of a signal port stopped (NMI port). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-1-1 | The first 64 KB of memory failed (data line, bit 0). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-1-2 | The first 64 KB of memory failed (data line, bit 1). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-1-3 | The first 64 KB of memory failed (data line, bit 2). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-1-4 | The first 64 KB of memory failed (data line, bit 3). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-2-1 | The first 64 KB of memory failed (data line, bit 4). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-2-2 | The first 64 KB of memory failed (data line, bit 5). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-2-3 | The first 64 KB of memory failed (data line, bit 6). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-2-4 | The first 64 KB of memory failed (data line, bit 7). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-3-1 | The first 64 KB of memory failed (data line, bit 8). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-3-2 | The first 64 KB of memory failed (data line, bit 9). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-3-3 | The first 64 KB of memory failed (data line, bit A). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-3-4 | The first 64 KB of memory failed (data line, bit B). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-4-1 | The first 64 KB of memory failed (data line, bit C). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-4-2 | The first 64 KB of memory failed (data line, bit D). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-4-3 | The first 64 KB of memory failed (data line, bit E). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 2-4-4 | The first 64 KB of memory failed (data line, bit F). | Check the memory modules and their slots.
+CODE | DELL-PREC-BEEP | 3-1-1 | The second memory access controller check stopped (DMA). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 3-1-2 | The first memory access controller check stopped (DMA). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 3-1-3 | The first signal controller check stopped (interrupt mask). | Contact Dell support.
+CODE | DELL-PREC-BEEP | 3-1-4 | The second signal controller check stopped (interrupt mask). | Contact Dell support.
+CODE | DELL-PREC-BEEP | 3-2-2 | Loading the signal table did not end (interrupts). | Contact Dell support.
+CODE | DELL-PREC-BEEP | 3-2-4 | The keyboard controller check stopped. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 3-3-1 | The settings memory power check stopped (CMOS). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 3-3-2 | The check of the saved settings stopped (CMOS). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 3-3-3 | The clock or the keyboard controller was not found. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 3-3-4 | The screen memory check stopped. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 3-4-1 | The screen setup check stopped. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 3-4-2 | The screen refresh check stopped. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 3-4-3 | The search for the graphics BIOS did not end. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 4-2-1 | The timer tick check stopped. | Contact Dell support.
+CODE | DELL-PREC-BEEP | 4-2-2 | The shutdown check stopped. | Contact Dell support.
+CODE | DELL-PREC-BEEP | 4-2-3 | A memory access gate failed (A20 gate). | Contact Dell support.
+CODE | DELL-PREC-BEEP | 4-2-4 | An unexpected signal stopped the start (protected mode). | Contact Dell support.
+CODE | DELL-PREC-BEEP | 4-3-1 | The memory check above the first 64 KB stopped. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 4-3-2 | No memory in the first bank (bank 0). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 4-3-3 | A timer check stopped (channel 2). | Contact Dell support.
+CODE | DELL-PREC-BEEP | 4-3-4 | The clock check stopped. | Contact Dell support.
+CODE | DELL-PREC-BEEP | 4-4-1 | The input and output chip failed (Super I/O). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-PREC-BEEP | 4-4-4 | The processor cache check failed. | Run the Dell hardware test (F12, then Diagnostics).
+
+TABLE | DELL-INSP-DT | Dell | COUNT | Dell Inspiron desktops - power light blinks or beeps | Inspiron desktops | 000124349 | 18 | 19/04/2026 | https://www.dell.com/support/kbdoc/en-us/000124349
+CODE | DELL-INSP-DT | 1 | The BIOS chip failed - Dell points to the system board. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-INSP-DT | 2 | No memory was found. | Check the memory modules and their slots.
+CODE | DELL-INSP-DT | 3 | A system board part failed (chipset, clock or keyboard chip). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-INSP-DT | 4 | The memory failed. | Check the memory modules and their slots.
+CODE | DELL-INSP-DT | 5 | The board's clock lost power (CMOS battery). | Reseat the coin battery. Still failing: run the hardware test.
+CODE | DELL-INSP-DT | 6 | The graphics card or chip failed. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-INSP-DT | 7 | The processor failed. | Run the Dell hardware test (F12, then Diagnostics).
+
+TABLE | DELL-XPS-DT | Dell | COUNT | Dell XPS desktops - beeps | XPS desktops | 000124349 | 18 | 19/04/2026 | https://www.dell.com/support/kbdoc/en-us/000124349
+CODE | DELL-XPS-DT | 1 | The BIOS chip check failed - the system board may have failed. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-XPS-DT | 2 | No memory was found. | Check the memory modules are seated right, and their slots.
+CODE | DELL-XPS-DT | 3 | The chipset of the system board may have failed. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-XPS-DT | 4 | The memory failed a read or write. | Check the memory modules and their slots.
+CODE | DELL-XPS-DT | 5 | The board's clock lost power (RTC). | Reseat the coin battery. Still failing: run the hardware test.
+CODE | DELL-XPS-DT | 6 | The clock of the board failed (RTC). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-XPS-DT | 7 | The graphics card or chip failed. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-XPS-DT | 8 | The processor failed. | Run the Dell hardware test (F12, then Diagnostics).
+
+TABLE | DELL-VOS-DT | Dell | COUNT | Dell Vostro desktops - amber power light blinks or beeps | Vostro desktops | 000124349 | 18 | 19/04/2026 | https://www.dell.com/support/kbdoc/en-us/000124349
+CODE | DELL-VOS-DT | 1 | The BIOS chip failed - Dell points to the system board. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-VOS-DT | 2 | No memory was found. | Check the memory modules and their slots.
+CODE | DELL-VOS-DT | 3 | A system board part failed (chipset, clock or keyboard chip). | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-VOS-DT | 4 | The memory failed a read or write. | Check the memory modules and their slots.
+CODE | DELL-VOS-DT | 5 | The board's clock lost power (CMOS battery). | Reseat the coin battery. Still failing: run the hardware test.
+CODE | DELL-VOS-DT | 6 | The graphics card failed its check. | Run the Dell hardware test (F12, then Diagnostics).
+CODE | DELL-VOS-DT | 7 | The processor failed. | Run the Dell hardware test (F12, then Diagnostics).
+
+TABLE | HP-NB-BLINK | HP | LIGHT | HP notebooks - caps lock light, long red then short white blinks | HP notebook PCs - HP names no model or year for this table | ish_1997719-1528356-16 | - | 13/11/2026 | https://support.hp.com/us-en/document/ish_1997719-1528356-16
+NOTE | HP-NB-BLINK | First number: long red blinks. Second number: short white blinks.
+NOTE | HP-NB-BLINK | A light with one color: long blinks first, then short ones.
+CODE | HP-NB-BLINK | 2,2 | The BIOS is damaged and no recovery copy was found. | Recover the BIOS from a USB drive with HP BIOS recovery.
+CODE | HP-NB-BLINK | 2,3 | The keyboard controller wants a key sequence typed. | Reset the controller: unplug power, hold the power button.
+CODE | HP-NB-BLINK | 2,4 | The keyboard controller is checking or repairing the boot block. | Reset the controller: unplug power, hold the power button.
+CODE | HP-NB-BLINK | 3,2 | The memory may have failed. | Reseat the memory. Still failing: contact HP support.
+CODE | HP-NB-BLINK | 3,3 | The graphics chip may have failed. | Contact HP support for a repair.
+CODE | HP-NB-BLINK | 3,4 | The power system may have failed. | Check the power cables and that the adapter is strong enough.
+CODE | HP-NB-BLINK | 3,5 | The processor was not found. | Contact HP support - the system board or the processor.
+CODE | HP-NB-BLINK | 3,6 | The processor does not support a setting that is turned on. | Clear the BIOS settings (CMOS), then leave that setting off.
+CODE | HP-NB-BLINK | 4,2 | The processor may be too hot. | Let it cool down. Clean the air vents.
+CODE | HP-NB-BLINK | 4,3 | The air around the PC may be too hot. | Let it cool down. Clean the air vents.
+CODE | HP-NB-BLINK | 4,4 | The graphics chip may be too hot. | Let it cool down. Clean the air vents.
+CODE | HP-NB-BLINK | 5,2 | The keyboard controller found no valid firmware. | Reset the controller: unplug power, hold the power button.
+CODE | HP-NB-BLINK | 5,3 | The controller could not reach the BIOS in time. | Remove all accessories. Still failing: contact HP support.
+CODE | HP-NB-BLINK | 5,4 | The controller waited too long for the board to start. | Remove all accessories. Still failing: contact HP support.
+
+TABLE | HP-DT-BLINK | HP | LIGHT | HP desktops - power light, long red then short white blinks | HP desktop PCs - HP names no model or year for this table | ish_1997210-1528385-16 | - | 13/11/2026 | https://support.hp.com/us-en/document/ish_1997210-1528385-16
+NOTE | HP-DT-BLINK | First number: long red blinks. Second number: short white blinks.
+NOTE | HP-DT-BLINK | Beeps, where the PC has them, give the same two numbers.
+CODE | HP-DT-BLINK | 2,2 | The BIOS is damaged and no recovery copy was found, or it updates. | Let the update finish. Then try HP BIOS recovery (Sure Start).
+CODE | HP-DT-BLINK | 2,3 | The controller wants a key sequence typed. | Follow the prompts. Still failing: HP BIOS recovery (Sure Start).
+CODE | HP-DT-BLINK | 2,4 | The controller is checking or repairing the boot block. | Let it recover the BIOS. Still failing: HP recovery (Sure Start).
+CODE | HP-DT-BLINK | 3,2 | The memory may have failed. | Run the memory test in the BIOS (F10). Reseat the memory.
+CODE | HP-DT-BLINK | 3,3 | The graphics chip may have failed. | Contact HP support.
+CODE | HP-DT-BLINK | 3,4 | The power system may have failed. | Try a power supply known to work. Remove parts one at a time.
+CODE | HP-DT-BLINK | 3,5 | The processor was not found. | Contact HP support - the system board or the processor.
+CODE | HP-DT-BLINK | 3,6 | The processor does not support a setting that is turned on. | Reset the BIOS settings (CMOS). Still failing: replace the part.
+CODE | HP-DT-BLINK | 3,7 | The cover was opened, removed while on, or is not fitted. | Fit the cover. Keep it on while the PC is on.
+CODE | HP-DT-BLINK | 4,2 | The processor may be too hot. | Check the fans. Clean the air vents. Reset the BIOS settings.
+CODE | HP-DT-BLINK | 4,3 | The PC is too hot inside. | Check the fans. Clean the air vents. Reset the BIOS settings.
+CODE | HP-DT-BLINK | 4,4 | The graphics card is too hot (MXM card). | Check the fans. Clean the air vents. Reset the BIOS settings.
+CODE | HP-DT-BLINK | 5,2 | The controller has no valid firmware. | Remove new hardware. Reset the BIOS settings. Update the PC.
+CODE | HP-DT-BLINK | 5,3 | A part did not answer the BIOS in time. | Reseat the part. Try one known to work. Then HP support.
+CODE | HP-DT-BLINK | 5,4 | The system board does not start fast enough for a part. | Use the right power supply. Reset the BIOS settings. Reseat parts.
+
+TABLE | HP-TESTS | HP | LIST | HP hardware test - what each test checks | HP PCs - the tests of HP PC Hardware Diagnostics (Esc, then F2) | ish_2854458-2733239-16 | - | 13/11/2026 | https://support.hp.com/us-en/document/ish_2854458-2733239-16
+NOTE | HP-TESTS | A test failed: choose Troubleshoot and follow the steps on the screen.
+NOTE | HP-TESTS | Still failing: write down the 24-digit failure ID for HP support.
+NOTE | HP-TESTS | HP does not publish what the failure ID means.
+CODE | HP-TESTS | Processor | Checks that every processor works and the BIOS started it. | -
+CODE | HP-TESTS | Memory - Fast | Runs test patterns over the memory. Start with this one. | -
+CODE | HP-TESTS | Memory - Quick | More memory patterns. Run it when Fast finds nothing. | -
+CODE | HP-TESTS | Memory - Extensive | The fullest memory test. Run it when Quick finds nothing. | -
+CODE | HP-TESTS | Hard Drive - Quick | Reads the disk's health record and runs its short self-test. | -
+CODE | HP-TESTS | Hard Drive - Extensive | The health record, then the short, optimized and long self-tests. | -
+CODE | HP-TESTS | Hard Drive - SMART Check | Reads the disk's health record against its limits (SMART). | -
+CODE | HP-TESTS | Hard Drive - Short DST | Reads a small part of the disk for errors. | -
+CODE | HP-TESTS | Hard Drive - Optimized DST | Reads the parts of the disk that Windows uses. | -
+CODE | HP-TESTS | Hard Drive - Long DST | Reads the whole disk. | -
+CODE | HP-TESTS | AC Adapter | Checks that the power adapter works. It needs a good battery. | -
+CODE | HP-TESTS | Audio | Checks the sound controller and outputs - you listen. | -
+CODE | HP-TESTS | Battery | Checks the battery's data and that it works. | -
+CODE | HP-TESTS | Bluetooth Module | Checks that the Bluetooth module is found - not that it connects. | -
+CODE | HP-TESTS | Fan - Speed | Checks that the fans work. | -
+CODE | HP-TESTS | Fan - Thermal | Checks that the processor fan works. | -
+CODE | HP-TESTS | Fingerprint Reader | Checks the fingerprint reader - you touch it. | -
+CODE | HP-TESTS | Keyboard | Checks each key - you press them. | -
+CODE | HP-TESTS | Mouse | Checks the pointer and drag and drop - you use it. | -
+CODE | HP-TESTS | Network - Wired Network | Checks the cable link and that an address is given. | -
+CODE | HP-TESTS | Network - Wireless Module | Reads the BIOS status of the Wi-Fi module - not the link. | -
+CODE | HP-TESTS | Network - WWAN Module | Reads the BIOS status of the mobile network module. | -
+CODE | HP-TESTS | Optical Drive | Checks that the CD or DVD drive reads and writes. | -
+CODE | HP-TESTS | Parallel Port | Checks the parallel port. | -
+CODE | HP-TESTS | Serial Port | Checks the serial port. | -
+CODE | HP-TESTS | System Board | Checks the board's devices, memory size, graphics, sound and USB. | -
+CODE | HP-TESTS | Touch Screen | Checks that the touch screen responds - you touch it. | -
+CODE | HP-TESTS | USB Port | Checks each USB port - you plug in a device. | -
+CODE | HP-TESTS | Video Memory | Checks the graphics memory. | -
+CODE | HP-TESTS | Video Palette | Checks the screen colors - you look at them. | -
+CODE | HP-TESTS | Webcam Connection | Checks that a webcam is found. | -
+
+TABLE | HP-BATT-CHECK | HP | LIST | HP battery check - what each result means (HP Support Assistant) | HP notebooks | ish_2854458-2733239-16 | - | 13/11/2026 | https://support.hp.com/us-en/document/ish_2854458-2733239-16
+CODE | HP-BATT-CHECK | Passed | The battery works as it should. | -
+CODE | HP-BATT-CHECK | Weak or Very Weak | It works, but runs much shorter than when new - normal aging. | A new battery gives back the full working time.
+CODE | HP-BATT-CHECK | Replace | The battery reports a failure. | Replace the battery soon. Under warranty: ask HP support.
+CODE | HP-BATT-CHECK | Failure with an ID number | The battery had a hardware failure. | Write down the status and the failure ID for HP support.
+CODE | HP-BATT-CHECK | No Battery | No battery was found. | Remove the battery, clean its pins, and fit it fully.
+CODE | HP-BATT-CHECK | Unknown | The battery check could not reach the battery. | Remove and refit the battery. Install HP's updates.

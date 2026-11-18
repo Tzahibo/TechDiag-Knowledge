@@ -1,0 +1,686 @@
+# TABLES.txt - tables the rules of TechDiag take a value from (K19, RULES-FORMAT.md 2a). Made By Tzahi Bocal.
+# Its place: <home>\TechDiag\Knowledge\TABLES.txt, beside RULES-VENDOR.txt. It is data only - nothing in it is run.
+# Written by tools/mk_biostables.py - do not edit by hand; run the script again.
+#
+#   DATE  | the date of this file (DD/MM/YYYY)
+#   TABLE | id | vendor | document id | version (- = none given) | DD/MM/YYYY | URL
+#   ROW   | table id | key | value
+#
+# The keys and the values are facts (a BIOS family or a model name, and a version number), taken from the makers'
+# own documents; the makers' words are not copied here. A rule names a table by its id:
+#   WHEN | <rule> | bios.version | TVLT | <table id> BY bios.family
+#
+# HP-SB2023-MIN: the minimum BIOS per BIOS family, from the table of minimum BIOS versions in HP's document named
+# (no version or date on the page; the date is the day it was read). Key: the BIOS family (bios.family).
+# DELL-SB2023-MIN: the minimum BIOS version with the 2023 certificate per model, from Dell's KB 000347876 version 20
+# (last modified 23/05/2026). Key: the model as pc.model holds it ("Dell " + Dell's platform name).
+DATE | 13/11/2026
+
+# HP: 297 rows of HP's table -> 178 BIOS families
+TABLE | HP-SB2023-MIN | HP | ish_13070353-13070429-16 | - | 13/11/2026 | https://support.hp.com/us-en/document/ish_13070353-13070429-16
+ROW | HP-SB2023-MIN | V90 | 01.10.00
+ROW | HP-SB2023-MIN | U93 | 01.16.00
+ROW | HP-SB2023-MIN | R93 | 01.34.00
+ROW | HP-SB2023-MIN | U90 | 01.16.00
+ROW | HP-SB2023-MIN | T90 | 01.22.00
+ROW | HP-SB2023-MIN | R91 | 01.33.00
+ROW | HP-SB2023-MIN | T91 | 01.22.01
+ROW | HP-SB2023-MIN | V70 | 01.10.00
+ROW | HP-SB2023-MIN | U70 | 01.16.01
+ROW | HP-SB2023-MIN | U75 | 01.16.00
+ROW | HP-SB2023-MIN | V74 | 01.10.00
+ROW | HP-SB2023-MIN | V75 | 01.10.00
+ROW | HP-SB2023-MIN | U86 | 01.16.00
+ROW | HP-SB2023-MIN | V77 | 01.11.01
+ROW | HP-SB2023-MIN | U77 | 01.20.00
+ROW | HP-SB2023-MIN | U87 | 01.20.00
+ROW | HP-SB2023-MIN | R74 | 01.32.00
+ROW | HP-SB2023-MIN | R70 | 01.33.00
+ROW | HP-SB2023-MIN | S70 | 01.22.00
+ROW | HP-SB2023-MIN | T37 | 01.22.00
+ROW | HP-SB2023-MIN | T39 | 01.22.00
+ROW | HP-SB2023-MIN | T76 | 01.22.00
+ROW | HP-SB2023-MIN | V83 | 01.10.03
+ROW | HP-SB2023-MIN | U82 | 01.14.00
+ROW | HP-SB2023-MIN | S77 | 01.22.00
+ROW | HP-SB2023-MIN | T82 | 01.22.00
+ROW | HP-SB2023-MIN | U71 | 01.16.01
+ROW | HP-SB2023-MIN | U76 | 01.16.01
+ROW | HP-SB2023-MIN | V82 | 01.10.03
+ROW | HP-SB2023-MIN | S73 | 01.22.00
+ROW | HP-SB2023-MIN | S93 | 01.22.00
+ROW | HP-SB2023-MIN | T93 | 01.22.00
+ROW | HP-SB2023-MIN | R90 | 01.33.00
+ROW | HP-SB2023-MIN | R78 | 01.33.00
+ROW | HP-SB2023-MIN | S74 | 01.22.00
+ROW | HP-SB2023-MIN | T77 | 01.22.00
+ROW | HP-SB2023-MIN | V80 | 01.11.01
+ROW | HP-SB2023-MIN | U80 | 01.20.00
+ROW | HP-SB2023-MIN | U95 | 01.15.01
+ROW | HP-SB2023-MIN | V95 | 01.12.00
+ROW | HP-SB2023-MIN | U94 | 01.15.00
+ROW | HP-SB2023-MIN | U98 | 01.15.00
+ROW | HP-SB2023-MIN | R71 | 01.33.00
+ROW | HP-SB2023-MIN | S71 | 01.26.00
+ROW | HP-SB2023-MIN | T70 | 01.22.00
+ROW | HP-SB2023-MIN | T87 | 01.22.00
+ROW | HP-SB2023-MIN | T89 | 01.22.00
+ROW | HP-SB2023-MIN | U72 | 01.16.00
+ROW | HP-SB2023-MIN | U85 | 01.16.00
+ROW | HP-SB2023-MIN | V72 | 01.10.00
+ROW | HP-SB2023-MIN | T85 | 01.22.00
+ROW | HP-SB2023-MIN | T88 | 01.22.00
+ROW | HP-SB2023-MIN | T99 | 01.22.00
+ROW | HP-SB2023-MIN | V78 | 01.11.01
+ROW | HP-SB2023-MIN | U78 | 01.20.00
+ROW | HP-SB2023-MIN | U88 | 01.20.00
+ROW | HP-SB2023-MIN | S79 | 01.22.00
+ROW | HP-SB2023-MIN | T78 | 01.22.00
+ROW | HP-SB2023-MIN | T96 | 01.22.00
+ROW | HP-SB2023-MIN | R79 | 01.34.00
+ROW | HP-SB2023-MIN | T72 | 01.22.00
+ROW | HP-SB2023-MIN | T74 | 01.22.00
+ROW | HP-SB2023-MIN | S84 | 01.22.00
+ROW | HP-SB2023-MIN | T83 | 01.22.00
+ROW | HP-SB2023-MIN | R72 | 01.33.00
+ROW | HP-SB2023-MIN | S83 | 01.22.00
+ROW | HP-SB2023-MIN | S95 | 01.22.00
+ROW | HP-SB2023-MIN | S94 | 01.23.00
+ROW | HP-SB2023-MIN | T94 | 01.22.00
+ROW | HP-SB2023-MIN | S80 | 01.22.00
+ROW | HP-SB2023-MIN | T80 | 01.22.00
+ROW | HP-SB2023-MIN | T71 | 01.22.00
+ROW | HP-SB2023-MIN | T86 | 01.22.00
+ROW | HP-SB2023-MIN | U73 | 01.16.00
+ROW | HP-SB2023-MIN | U84 | 01.16.00
+ROW | HP-SB2023-MIN | S81 | 01.22.00
+ROW | HP-SB2023-MIN | T79 | 01.22.00
+ROW | HP-SB2023-MIN | T98 | 01.22.00
+ROW | HP-SB2023-MIN | U79 | 01.20.00
+ROW | HP-SB2023-MIN | S11 | 02.24.00
+ROW | HP-SB2023-MIN | S21 | 02.24.00
+ROW | HP-SB2023-MIN | U21 | 02.19.01
+ROW | HP-SB2023-MIN | U01 | 02.19.01
+ROW | HP-SB2023-MIN | P25 | 02.67
+ROW | HP-SB2023-MIN | Q05 | 02.27.00
+ROW | HP-SB2023-MIN | Q06 | 02.27.00
+ROW | HP-SB2023-MIN | Q09 | 02.27.00
+ROW | HP-SB2023-MIN | R26 | 02.24.00
+ROW | HP-SB2023-MIN | R06 | 02.24.00
+ROW | HP-SB2023-MIN | R09 | 02.24.00
+ROW | HP-SB2023-MIN | Q21 | 02.32.00
+ROW | HP-SB2023-MIN | R21 | 02.24.00
+ROW | HP-SB2023-MIN | R01 | 02.24.00
+ROW | HP-SB2023-MIN | S01 | 02.24.00
+ROW | HP-SB2023-MIN | T21 | 02.20.00
+ROW | HP-SB2023-MIN | T01 | 02.20.00
+ROW | HP-SB2023-MIN | S29 | 02.20.00
+ROW | HP-SB2023-MIN | S09 | 02.20.00
+ROW | HP-SB2023-MIN | T26 | 02.18.00
+ROW | HP-SB2023-MIN | T06 | 02.18.00
+ROW | HP-SB2023-MIN | Q10 | 02.32.00
+ROW | HP-SB2023-MIN | R11 | 02.24.00
+ROW | HP-SB2023-MIN | T11 | 02.20.00
+ROW | HP-SB2023-MIN | U11 | 02.20.00
+ROW | HP-SB2023-MIN | U23 | 02.20.00
+ROW | HP-SB2023-MIN | U03 | 02.19.01
+ROW | HP-SB2023-MIN | R23 | 02.24.00
+ROW | HP-SB2023-MIN | S23 | 02.24.00
+ROW | HP-SB2023-MIN | R03 | 02.24.00
+ROW | HP-SB2023-MIN | R08 | 02.24.00
+ROW | HP-SB2023-MIN | S03 | 02.24.00
+ROW | HP-SB2023-MIN | S08 | 02.24.00
+ROW | HP-SB2023-MIN | R24 | 02.26.00
+ROW | HP-SB2023-MIN | S25 | 02.21.00
+ROW | HP-SB2023-MIN | S27 | 02.21.00
+ROW | HP-SB2023-MIN | T25 | 02.18.00
+ROW | HP-SB2023-MIN | T27 | 02.18.00
+ROW | HP-SB2023-MIN | T05 | 02.18.00
+ROW | HP-SB2023-MIN | Q22 | 02.32.00
+ROW | HP-SB2023-MIN | R22 | 02.24.00
+ROW | HP-SB2023-MIN | R02 | 02.24.00
+ROW | HP-SB2023-MIN | R07 | 02.24.00
+ROW | HP-SB2023-MIN | S02 | 02.24.00
+ROW | HP-SB2023-MIN | S22 | 02.24.00
+ROW | HP-SB2023-MIN | S07 | 02.24.00
+ROW | HP-SB2023-MIN | R12 | 02.24.00
+ROW | HP-SB2023-MIN | S12 | 02.24.00
+ROW | HP-SB2023-MIN | U13 | 02.19.01
+ROW | HP-SB2023-MIN | R92 | 01.33.00
+ROW | HP-SB2023-MIN | S91 | 01.22.00
+ROW | HP-SB2023-MIN | S92 | 01.22.00
+ROW | HP-SB2023-MIN | T95 | 01.22.00
+ROW | HP-SB2023-MIN | V96 | 01.10.00
+ROW | HP-SB2023-MIN | U96 | 01.16.00
+ROW | HP-SB2023-MIN | V97 | 01.10.00
+ROW | HP-SB2023-MIN | V85 | 01.10.00
+ROW | HP-SB2023-MIN | T81 | 01.22.00
+ROW | HP-SB2023-MIN | U97 | 01.16.00
+ROW | HP-SB2023-MIN | T75 | 01.22.00
+ROW | HP-SB2023-MIN | T92 | 01.22.00
+ROW | HP-SB2023-MIN | V99 | 01.10.00
+ROW | HP-SB2023-MIN | U99 | 01.16.00
+ROW | HP-SB2023-MIN | Q71 | 01.33.00
+ROW | HP-SB2023-MIN | T50 | 01.06.12
+ROW | HP-SB2023-MIN | Q50 | 01.08.13
+ROW | HP-SB2023-MIN | S50 | 01.04.20
+ROW | HP-SB2023-MIN | U50 | 03.05.02
+ROW | HP-SB2023-MIN | U62 | 01.02.27
+ROW | HP-SB2023-MIN | U61 | 01.02.30
+ROW | HP-SB2023-MIN | U65 | 01.02.05
+ROW | HP-SB2023-MIN | U60 | 01.02.29
+ROW | HP-SB2023-MIN | V30 | 02.09.02
+ROW | HP-SB2023-MIN | Q30 | 02.32.00
+ROW | HP-SB2023-MIN | T97 | 01.22.00
+ROW | HP-SB2023-MIN | Q97 | 01.33.00
+ROW | HP-SB2023-MIN | P30 | 02.55
+ROW | HP-SB2023-MIN | S30 | 02.24.00
+ROW | HP-SB2023-MIN | Q35 | 02.32.00
+ROW | HP-SB2023-MIN | U81 | 01.22.00
+ROW | HP-SB2023-MIN | U89 | 01.22.00
+ROW | HP-SB2023-MIN | Q89 | 01.35.01
+ROW | HP-SB2023-MIN | S82 | 01.28.01
+ROW | HP-SB2023-MIN | Q92 | 01.35.01
+ROW | HP-SB2023-MIN | S85 | 01.24.01
+ROW | HP-SB2023-MIN | R81 | 01.34.01
+ROW | HP-SB2023-MIN | S78 | 01.24.01
+ROW | HP-SB2023-MIN | U74 | 01.18.00
+ROW | HP-SB2023-MIN | U91 | 01.18.00
+ROW | HP-SB2023-MIN | M45 | 01.14
+ROW | HP-SB2023-MIN | M46 | 01.08
+ROW | HP-SB2023-MIN | N45 | 01.12
+ROW | HP-SB2023-MIN | N46 | 02.19
+ROW | HP-SB2023-MIN | N41 | 01.19
+ROW | HP-SB2023-MIN | N40 | 01.13
+ROW | HP-SB2023-MIN | M40 | 01.18
+ROW | HP-SB2023-MIN | N47 | 01.20
+ROW | HP-SB2023-MIN | M43 | 01.23
+ROW | HP-SB2023-MIN | M42 | 01.22
+
+# Dell: 451 rows of Dell's table -> 485 models (2 left out, 10 the same row again)
+TABLE | DELL-SB2023-MIN | Dell | 000347876 | 20 | 23/05/2026 | https://www.dell.com/support/kbdoc/en-us/000347876
+ROW | DELL-SB2023-MIN | Alienware 16 Area-51 AA16250 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Alienware 16 Area-51 AA16250 | 1.7.0
+ROW | DELL-SB2023-MIN | Alienware 16 Aurora AC16250 | 1.6.3
+ROW | DELL-SB2023-MIN | Dell Alienware 16 Aurora AC16250 | 1.6.3
+ROW | DELL-SB2023-MIN | Alienware 16X Aurora AC16251 | 1.5.4
+ROW | DELL-SB2023-MIN | Dell Alienware 16X Aurora AC16251 | 1.5.4
+ROW | DELL-SB2023-MIN | Alienware 18 Area-51 AA18250 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Alienware 18 Area-51 AA18250 | 1.7.0
+ROW | DELL-SB2023-MIN | Alienware Area 51m R2 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell Alienware Area 51m R2 | 1.35.0
+ROW | DELL-SB2023-MIN | Alienware Area-51 AAT2250 | 1.9.1
+ROW | DELL-SB2023-MIN | Dell Alienware Area-51 AAT2250 | 1.9.1
+ROW | DELL-SB2023-MIN | Alienware Area-51 AAT2265 | 1.0.0
+ROW | DELL-SB2023-MIN | Dell Alienware Area-51 AAT2265 | 1.0.0
+ROW | DELL-SB2023-MIN | Alienware Aurora ACT1250 | 1.8.1
+ROW | DELL-SB2023-MIN | Dell Alienware Aurora ACT1250 | 1.8.1
+ROW | DELL-SB2023-MIN | Alienware Aurora R13 | 1.29.0
+ROW | DELL-SB2023-MIN | Dell Alienware Aurora R13 | 1.29.0
+ROW | DELL-SB2023-MIN | Alienware Aurora R15 | 1.25.1
+ROW | DELL-SB2023-MIN | Dell Alienware Aurora R15 | 1.25.1
+ROW | DELL-SB2023-MIN | Alienware Aurora R15 AMD | 1.21.0
+ROW | DELL-SB2023-MIN | Dell Alienware Aurora R15 AMD | 1.21.0
+ROW | DELL-SB2023-MIN | Alienware Aurora R16 | 2.21.1
+ROW | DELL-SB2023-MIN | Dell Alienware Aurora R16 | 2.21.1
+ROW | DELL-SB2023-MIN | Alienware Aurora Ryzen Edition R14 | 2.27.1
+ROW | DELL-SB2023-MIN | Dell Alienware Aurora Ryzen Edition R14 | 2.27.1
+ROW | DELL-SB2023-MIN | Alienware m15 R3 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell Alienware m15 R3 | 1.35.0
+ROW | DELL-SB2023-MIN | Alienware m15 R6 | 1.40.0
+ROW | DELL-SB2023-MIN | Dell Alienware m15 R6 | 1.40.0
+ROW | DELL-SB2023-MIN | Alienware m15 R7 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell Alienware m15 R7 | 1.35.0
+ROW | DELL-SB2023-MIN | Alienware m15 R7 AMD | 1.24.0
+ROW | DELL-SB2023-MIN | Dell Alienware m15 R7 AMD | 1.24.0
+ROW | DELL-SB2023-MIN | Alienware m15 Ryzen Edition R5 | 1.29.1
+ROW | DELL-SB2023-MIN | Dell Alienware m15 Ryzen Edition R5 | 1.29.1
+ROW | DELL-SB2023-MIN | Alienware m16 R1 | 1.29.1
+ROW | DELL-SB2023-MIN | Dell Alienware m16 R1 | 1.29.1
+ROW | DELL-SB2023-MIN | Alienware m16 R1 AMD | 1.20.0
+ROW | DELL-SB2023-MIN | Dell Alienware m16 R1 AMD | 1.20.0
+ROW | DELL-SB2023-MIN | Alienware m16 R2 | 1.15.0
+ROW | DELL-SB2023-MIN | Dell Alienware m16 R2 | 1.15.0
+ROW | DELL-SB2023-MIN | Alienware m17 R3 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell Alienware m17 R3 | 1.35.0
+ROW | DELL-SB2023-MIN | Alienware m17 R5 AMD | 1.24.0
+ROW | DELL-SB2023-MIN | Dell Alienware m17 R5 AMD | 1.24.0
+ROW | DELL-SB2023-MIN | Alienware m18 | 1.20.0
+ROW | DELL-SB2023-MIN | Dell Alienware m18 | 1.20.0
+ROW | DELL-SB2023-MIN | Alienware m18 R1 | 1.29.1
+ROW | DELL-SB2023-MIN | Dell Alienware m18 R1 | 1.29.1
+ROW | DELL-SB2023-MIN | Alienware M18 R2 | 1.17.1
+ROW | DELL-SB2023-MIN | Dell Alienware M18 R2 | 1.17.1
+ROW | DELL-SB2023-MIN | Alienware x14 | 1.29.0
+ROW | DELL-SB2023-MIN | Dell Alienware x14 | 1.29.0
+ROW | DELL-SB2023-MIN | Alienware x14 R2 | 1.26.1
+ROW | DELL-SB2023-MIN | Dell Alienware x14 R2 | 1.26.1
+ROW | DELL-SB2023-MIN | Alienware x15 R1 | 1.31.1
+ROW | DELL-SB2023-MIN | Dell Alienware x15 R1 | 1.31.1
+ROW | DELL-SB2023-MIN | Alienware x15 R2 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell Alienware x15 R2 | 1.30.0
+ROW | DELL-SB2023-MIN | Alienware x16 R1 | 1.26.1
+ROW | DELL-SB2023-MIN | Dell Alienware x16 R1 | 1.26.1
+ROW | DELL-SB2023-MIN | Alienware X16 R2 | 1.15.0
+ROW | DELL-SB2023-MIN | Dell Alienware X16 R2 | 1.15.0
+ROW | DELL-SB2023-MIN | Alienware x17 R1 | 1.31.1
+ROW | DELL-SB2023-MIN | Dell Alienware x17 R1 | 1.31.1
+ROW | DELL-SB2023-MIN | Alienware x17 R2 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell Alienware x17 R2 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell ChengMing 3900 | 1.34.1
+ROW | DELL-SB2023-MIN | Dell ChengMing 3910 | 1.29.1
+ROW | DELL-SB2023-MIN | Dell ChengMing 3911 | 1.29.1
+ROW | DELL-SB2023-MIN | Dell 14 DC14250 | 1.1.1
+ROW | DELL-SB2023-MIN | Dell 14 DC14255 | 1.4.1
+ROW | DELL-SB2023-MIN | Dell 14 Plus 2-in-1 DB04250 | 1.6.0
+ROW | DELL-SB2023-MIN | Dell 14 Plus 2-in-1 DB04255 | 1.4.1
+ROW | DELL-SB2023-MIN | Dell 14 Plus DB14250 | 1.6.0
+ROW | DELL-SB2023-MIN | Dell 14 Plus DB14255 | 1.4.1
+ROW | DELL-SB2023-MIN | Dell 14 Premium DA14250 | 1.3.2
+ROW | DELL-SB2023-MIN | Dell 15 DC15250 | 1.2.1
+ROW | DELL-SB2023-MIN | Dell 15 DC15255 | 1.3.1
+ROW | DELL-SB2023-MIN | Dell 16 DC16250 | 1.3.0
+ROW | DELL-SB2023-MIN | Dell 16 DC16251 | 1.3.0
+ROW | DELL-SB2023-MIN | Dell 16 DC16255 | 1.0.1
+ROW | DELL-SB2023-MIN | Dell 16 DC16256 | 1.0.1
+ROW | DELL-SB2023-MIN | Dell 16 Plus 2-in-1 DB06250 | 1.6.0
+ROW | DELL-SB2023-MIN | Dell 16 Plus DB16250 | 1.6.0
+ROW | DELL-SB2023-MIN | Dell 16 Plus DB16255 | 1.4.1
+ROW | DELL-SB2023-MIN | Dell 16 Premium DA16250 | 1.5.0
+ROW | DELL-SB2023-MIN | Dell 24 All-in-One EC24250 | 1.7.1
+ROW | DELL-SB2023-MIN | DELL 27 All-in-One EC27250 | 1.7.1
+ROW | DELL-SB2023-MIN | Dell Laptop DC14255 | 1.4.1
+ROW | DELL-SB2023-MIN | Dell Slim ECS1250 | 1.6.2
+ROW | DELL-SB2023-MIN | Dell Tower ECT1250 | 1.6.2
+ROW | DELL-SB2023-MIN | Dell Tower Plus EBT2250 | 1.8.1
+ROW | DELL-SB2023-MIN | Dell G15 5510 | 1.36.0
+ROW | DELL-SB2023-MIN | Dell G15 5511 | 1.39.0
+ROW | DELL-SB2023-MIN | Dell G15 5515 | 1.28.1
+ROW | DELL-SB2023-MIN | Dell G15 5520 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell G15 5525 | 1.24.0
+ROW | DELL-SB2023-MIN | Dell G15 5530 | 1.28.1
+ROW | DELL-SB2023-MIN | Dell G15 5535 | 1.16.0
+ROW | DELL-SB2023-MIN | Dell G16 7620 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell G16 7630 | 1.28.1
+ROW | DELL-SB2023-MIN | Dell Pro 13 Plus PB13250 | 2.6.1
+ROW | DELL-SB2023-MIN | Dell Pro 13 Plus PB13255 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro 13 Premium PA13250 | 2.6.1
+ROW | DELL-SB2023-MIN | Dell Pro 14 Essential PV14250 | 1.1.1
+ROW | DELL-SB2023-MIN | Dell Pro 14 Essential PV14255 | 1.5.0
+ROW | DELL-SB2023-MIN | Dell Pro 14 PC14250 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro 14 PC14255 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro 14 Plus PB14250 | 2.6.1
+ROW | DELL-SB2023-MIN | Dell Pro 14 Plus PB14255 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro 14 Premium PA14250 | 2.6.1
+ROW | DELL-SB2023-MIN | Dell Pro 15 Essential PV15250 | 1.0.0
+ROW | DELL-SB2023-MIN | Dell Pro 15 Essential PV15255 | 1.2.1
+ROW | DELL-SB2023-MIN | Dell Pro 16 PC16250 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro 16 PC16255 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro 16 Plus PB16250 | 2.6.1
+ROW | DELL-SB2023-MIN | Dell Pro 16 Plus PB16255 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro 24 All-in-One Plus QB24250 | 1.8.1
+ROW | DELL-SB2023-MIN | Dell Pro 24 All-in-One QC24250 | 1.8.1
+ROW | DELL-SB2023-MIN | Dell Pro 24 All-in-One QC24251 | 1.8.1
+ROW | DELL-SB2023-MIN | Dell Pro Laptop PC14250 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro Laptop PC16250 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro Max 14 MC14250 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro Max 14 MC14255 | 1.2.1
+ROW | DELL-SB2023-MIN | Dell Pro Max 14 Premium MA14250 | 1.4.2
+ROW | DELL-SB2023-MIN | Dell Pro Max 16 MC16250 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro Max 16 MC16255 | 1.2.1
+ROW | DELL-SB2023-MIN | Dell Pro Max 16 Plus MB16250 | 1.3.3
+ROW | DELL-SB2023-MIN | Dell Pro Max 16 Premium MA16250 | 1.4.2
+ROW | DELL-SB2023-MIN | Dell Pro Max 18 Plus MB18250 | 1.3.3
+ROW | DELL-SB2023-MIN | Dell Pro Max Micro FCM2250 | 1.7.1
+ROW | DELL-SB2023-MIN | Dell Pro Max Slim FCS1250 | 1.7.1
+ROW | DELL-SB2023-MIN | Dell Pro Max Tower T2 FCT2250 | 1.7.1
+ROW | DELL-SB2023-MIN | Dell Pro Max with GB10 FCM1253 | 1.1.0
+ROW | DELL-SB2023-MIN | Dell Pro Micro QCM1255 | 1.4.2
+ROW | DELL-SB2023-MIN | Dell Pro Micro QCM1250 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro Micro QCT1255 | 1.4.2
+ROW | DELL-SB2023-MIN | Dell Pro Micro Plus QBM1250 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro Rugged 10 Tablet | 1.1.0
+ROW | DELL-SB2023-MIN | Dell Pro Rugged 12 Tablet | 1.1.0
+ROW | DELL-SB2023-MIN | Dell Pro Rugged 13 RA13250 | 1.9.0
+ROW | DELL-SB2023-MIN | Dell Pro Rugged 14 RB14250 | 1.9.0
+ROW | DELL-SB2023-MIN | Dell Pro Slim QCS1255 | 1.4.2
+ROW | DELL-SB2023-MIN | Dell Pro Slim Essential QVS1260 | 1.8.1
+ROW | DELL-SB2023-MIN | Dell Pro Slim Plus QBS1250 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro Slim QCS1250 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro Tower Essential QVT1260 | 1.8.1
+ROW | DELL-SB2023-MIN | Dell Pro Tower QCT1255 | 1.4.2
+ROW | DELL-SB2023-MIN | Dell Pro Tower Plus QBT1250 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Pro Tower QCT1250 | 1.7.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 13 5320 | 1.28.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 13 5330 | 1.25.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 3420 | 1.0.14
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 5410 2-in-1 | 2.36.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 5420 | 1.31.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 5425 | 1.24.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 5430 | 1.24.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 5435 | 1.18.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 5440 | 1.15.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 5441 | 2.11.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 5445 | 1.13.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 7420 2-in-1 | 1.30.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 7425 2-in-1 | 1.24.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 7430 2-in-1 | 1.24.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 7435 2-in-1 | 1.18.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 7440 2-in-1 | 1.15.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 7441 | 2.11.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 7445 2-in-1 | 1.13.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 Plus 7420 | 1.32.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 Plus 7430 | 1.24.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 14 Plus 7440 | 1.17.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 15 3510 | 1.28.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 15 3511 | 1.40.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 15 3515 | 1.36.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 15 3520 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 15 3521 | 1.23.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 15 3525 | 1.31.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 15 3530 | 1.23.2
+ROW | DELL-SB2023-MIN | Dell Inspiron 15 3535 | 1.24.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 15 5510 | 2.37.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 15 5518 | 2.37.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 16 5620 | 1.31.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 16 5625 | 1.24.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 16 5630 | 1.24.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 16 5635 | 1.18.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 16 5640 | 1.15.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 16 5645 | 1.14.2
+ROW | DELL-SB2023-MIN | Dell Inspiron 16 7620 2-in-1 | 1.30.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 16 7630 2-in-1 | 1.24.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 16 7635 2-in-1 | 1.18.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 16 7640 2-in-1 | 1.16.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 16 Plus 7620 | 1.32.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 16 Plus 7630 | 1.24.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 16 Plus 7640 | 1.17.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 24 5415 All-in-One | 1.29.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 24 5420 All-in-One | 1.22.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 24 5430 All-in-One | 1.15.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 27 7720 All-in-One | 1.22.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 27 7730 All-in-One | 1.15.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 3020 Desktop | 1.29.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 3020 Small Desktop | 1.29.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 3030 | 1.19.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 3030S | 1.19.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 3501 | 1.41.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 3502 | 1.25.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 3910 | 1.34.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 5400 | 1.39.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 5401 | 1.39.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 5401 All-in-One | 1.39.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 5410 All-in-One | 1.32.1
+ROW | DELL-SB2023-MIN | Dell Inspiron 5415 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 5515 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 7415 2-in-1 | 1.31.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 7700 All-In-One | 1.39.0
+ROW | DELL-SB2023-MIN | Dell Inspiron 7710 All-in-One | 1.32.1
+ROW | DELL-SB2023-MIN | Dell Edge Gateway 5000 | 1.34.0
+ROW | DELL-SB2023-MIN | Dell Embedded Box PC 3000 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell Embedded Box PC 5000 | 1.31.0
+ROW | DELL-SB2023-MIN | Dell Latitude 12 Rugged Extreme 7214 | 1.52.0
+ROW | DELL-SB2023-MIN | Dell Latitude 3120 | 1.37.0
+ROW | DELL-SB2023-MIN | Dell Latitude 3140 | 1.25.5
+ROW | DELL-SB2023-MIN | Dell Latitude 3140 2-in-1 | 1.25.5
+ROW | DELL-SB2023-MIN | Dell Latitude 3190 | 1.42.0
+ROW | DELL-SB2023-MIN | Dell Latitude 3190 2-in-1 | 1.42.0
+ROW | DELL-SB2023-MIN | Dell Latitude 3301 | 1.37.0
+ROW | DELL-SB2023-MIN | Dell Latitude 3310 | 1.31.0
+ROW | DELL-SB2023-MIN | Dell Latitude 3310 2-In-1 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell Latitude 3320 | 1.40.0
+ROW | DELL-SB2023-MIN | Dell Latitude 3330 | 1.32.1
+ROW | DELL-SB2023-MIN | Dell Latitude 3340 | 1.25.1
+ROW | DELL-SB2023-MIN | Dell Latitude 3400 | 1.39.0
+ROW | DELL-SB2023-MIN | Dell Latitude 3410 | 1.36.0
+ROW | DELL-SB2023-MIN | Dell Latitude 3420 | 1.44.0
+ROW | DELL-SB2023-MIN | Dell Latitude 3430 | 1.30.1
+ROW | DELL-SB2023-MIN | Dell Latitude 3440 | 1.25.1
+ROW | DELL-SB2023-MIN | Dell Latitude 3450 | 1.16.1
+ROW | DELL-SB2023-MIN | Dell Latitude 3500 | 1.39.0
+ROW | DELL-SB2023-MIN | Dell Latitude 3510 | 1.36.0
+ROW | DELL-SB2023-MIN | Dell Latitude 3520 | 1.44.0
+ROW | DELL-SB2023-MIN | Dell Latitude 3530 | 1.30.1
+ROW | DELL-SB2023-MIN | Dell Latitude 3540 | 1.25.1
+ROW | DELL-SB2023-MIN | Dell Latitude 3550 | 1.16.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5300 | 1.37.0
+ROW | DELL-SB2023-MIN | Dell Latitude 5300 2-in-1 | 1.37.0
+ROW | DELL-SB2023-MIN | Dell Latitude 5310 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell Latitude 5310 2-in-1 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell Latitude 5320 | 1.46.0
+ROW | DELL-SB2023-MIN | Dell Latitude 5330 | 1.32.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5340 | 1.24.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5350 | 1.16.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5400 | 1.41.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5401 | 1.42.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5410 | 1.38.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5411 | 1.39.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5420 | 1.49.0
+ROW | DELL-SB2023-MIN | Dell Latitude 5420 Rugged | 1.40.0
+ROW | DELL-SB2023-MIN | Dell Latitude 5421 | 1.41.0
+ROW | DELL-SB2023-MIN | Dell Latitude 5424 Rugged | 1.40.0
+ROW | DELL-SB2023-MIN | Dell Latitude 5430 | 1.32.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5430 Rugged Laptop | 1.39.0
+ROW | DELL-SB2023-MIN | Dell Latitude 5431 | 1.33.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5440 | 1.25.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5450 | 1.16.2
+ROW | DELL-SB2023-MIN | Dell Latitude 5455 | 2.11.0
+ROW | DELL-SB2023-MIN | Dell Latitude 5500 | 1.41.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5501 | 1.42.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5510 | 1.38.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5511 | 1.39.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5520 | 1.46.0
+ROW | DELL-SB2023-MIN | Dell Latitude 5521 | 1.39.0
+ROW | DELL-SB2023-MIN | Dell Latitude 5530 | 1.32.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5531 | 1.32.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5540 | 1.24.1
+ROW | DELL-SB2023-MIN | Dell Latitude 5550 | 1.16.2
+ROW | DELL-SB2023-MIN | Dell Latitude 7030 Rugged Extreme | 1.17.3
+ROW | DELL-SB2023-MIN | Dell Latitude 7200 2-In-1 | 1.38.0
+ROW | DELL-SB2023-MIN | Dell Latitude 7210 2-in-1 | 1.40.0
+ROW | DELL-SB2023-MIN | Dell Latitude 7212 Rugged Extreme Tablet | 1.58.0
+ROW | DELL-SB2023-MIN | Dell Latitude 7220 Rugged Extreme | 1.48.0
+ROW | DELL-SB2023-MIN | Dell Latitude 7230 Rugged Extreme | 1.26.4
+ROW | DELL-SB2023-MIN | Dell Latitude 7300 | 1.42.1
+ROW | DELL-SB2023-MIN | Dell Latitude 7310 | 1.41.1
+ROW | DELL-SB2023-MIN | Dell Latitude 7320 | 1.46.0
+ROW | DELL-SB2023-MIN | Dell Latitude 7320 Detachable | 1.43.0
+ROW | DELL-SB2023-MIN | Dell Latitude 7330 | 1.34.1
+ROW | DELL-SB2023-MIN | Dell Latitude 7330 Rugged Laptop | 1.39.0
+ROW | DELL-SB2023-MIN | Dell Latitude 7340 | 1.25.1
+ROW | DELL-SB2023-MIN | Dell Latitude 7350 | 1.16.1
+ROW | DELL-SB2023-MIN | Dell Latitude 7350 Detachable | 1.14.1
+ROW | DELL-SB2023-MIN | Dell Latitude 7400 | 1.42.1
+ROW | DELL-SB2023-MIN | Dell Latitude 7400 2-In-1 | 1.37.0
+ROW | DELL-SB2023-MIN | Dell Latitude 7410 | 1.41.1
+ROW | DELL-SB2023-MIN | Dell Latitude 7420 | 1.46.0
+ROW | DELL-SB2023-MIN | Dell Latitude 7424 Rugged Extreme | 1.40.0
+ROW | DELL-SB2023-MIN | Dell Latitude 7430 | 1.34.1
+ROW | DELL-SB2023-MIN | Dell Latitude 7440 | 1.25.1
+ROW | DELL-SB2023-MIN | Dell Latitude 7450 | 1.16.0
+ROW | DELL-SB2023-MIN | Dell Latitude 7455 | 2.11.0
+ROW | DELL-SB2023-MIN | Dell Latitude 7520 | 1.46.0
+ROW | DELL-SB2023-MIN | Dell Latitude 7530 | 1.34.1
+ROW | DELL-SB2023-MIN | Dell Latitude 7640 | 1.25.1
+ROW | DELL-SB2023-MIN | Dell Latitude 7650 | 1.16.0
+ROW | DELL-SB2023-MIN | Dell Latitude 9330 | 1.31.0
+ROW | DELL-SB2023-MIN | Dell Latitude 9410 | 1.39.1
+ROW | DELL-SB2023-MIN | Dell Latitude 9420 | 1.42.0
+ROW | DELL-SB2023-MIN | Dell Latitude 9430 | 1.34.1
+ROW | DELL-SB2023-MIN | Dell Latitude 9440 2-in-1 | 1.23.1
+ROW | DELL-SB2023-MIN | Dell Latitude 9450 | 1.15.0
+ROW | DELL-SB2023-MIN | Dell Latitude 9510 2-in-1 | 1.38.0
+ROW | DELL-SB2023-MIN | Dell Latitude 9520 | 1.43.0
+ROW | DELL-SB2023-MIN | Dell Latitude Rugged 7220EX | 1.48.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 3000 Micro | 1.34.1
+ROW | DELL-SB2023-MIN | Dell OptiPlex 3000 Small Form Factor | 1.34.1
+ROW | DELL-SB2023-MIN | Dell OptiPlex 3000 Tower | 1.34.1
+ROW | DELL-SB2023-MIN | Dell OptiPlex 3000 Thin Client | 1.29.2
+ROW | DELL-SB2023-MIN | Dell OptiPlex 3070 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 3080 | 2.33.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 3090 | 2.27.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 3090 Ultra | 1.38.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 3280 All-in-One | 1.41.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 5000 Micro | 1.33.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 5000 Small Form Factor | 1.33.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 5000 Tower | 1.33.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 5070 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 5080 | 1.33.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 5090 Micro | 1.37.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 5090 Small Form Factor | 1.37.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 5090 Tower | 1.37.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 5270 All-in-One | 1.40.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 5400 All-In-One | 1.1.53
+ROW | DELL-SB2023-MIN | Dell OptiPlex 5480 All-in-One | 1.42.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 5490 All-In-One | 1.43.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7000 Micro | 1.33.2
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7000 Small Form Factor | 1.33.2
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7000 Tower | 1.33.2
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7000 XE Micro | 1.33.2
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7070 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7070 Ultra | 1.33.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7071 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7080 | 1.36.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7090 Tower | 1.37.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7090 Ultra | 1.38.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7400 All-In-One | 1.1.53
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7470 All-in-One | 1.40.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7480 All-in-One | 1.42.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7490 All-In-One | 1.43.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7770 All-in-One | 1.40.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex 7780 All-in-One | 1.42.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex AIO 7420 | 1.20.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex All-in-One 7410 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex Micro 7010 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex Micro Plus 7010 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex Micro 7020 | 1.20.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex SFF 7020 | 1.20.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex Small Form Factor 7010 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex Small Form Factor Plus 7010 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex Tower 7010 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex Tower Plus 7010 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex Tower 7020 | 1.20.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex XE3 | 1.38.0
+ROW | DELL-SB2023-MIN | Dell OptiPlex XE4 SFF | 1.33.2
+ROW | DELL-SB2023-MIN | Dell OptiPlex XE4 Tower | 1.33.2
+ROW | DELL-SB2023-MIN | Dell Precision 3240 Compact | 1.38.0
+ROW | DELL-SB2023-MIN | Dell Precision 3260 XE Compact | 3.18.3
+ROW | DELL-SB2023-MIN | Dell Precision 3260 Compact | 3.18.3
+ROW | DELL-SB2023-MIN | Dell Precision 3280 CFF | 1.16.2
+ROW | DELL-SB2023-MIN | Dell Precision 3430 Tower | 1.37.0
+ROW | DELL-SB2023-MIN | Dell Precision 3431 Tower | 1.36.0
+ROW | DELL-SB2023-MIN | Dell Precision 3440 | 1.36.0
+ROW | DELL-SB2023-MIN | Dell Precision 3450 | 1.37.0
+ROW | DELL-SB2023-MIN | Dell Precision 3460 XE Small Form Factor | 3.18.3
+ROW | DELL-SB2023-MIN | Dell Precision 3460 Small Form Factor | 3.18.3
+ROW | DELL-SB2023-MIN | Dell Precision 3470 | 1.33.1
+ROW | DELL-SB2023-MIN | Dell Precision 3480 | 1.25.1
+ROW | DELL-SB2023-MIN | Dell Precision 3490 | 1.16.2
+ROW | DELL-SB2023-MIN | Dell Precision 3540 | 1.41.1
+ROW | DELL-SB2023-MIN | Dell Precision 3541 | 1.42.1
+ROW | DELL-SB2023-MIN | Dell Precision 3550 | 1.38.1
+ROW | DELL-SB2023-MIN | Dell Precision 3551 | 1.39.1
+ROW | DELL-SB2023-MIN | Dell Precision 3560 | 1.46.0
+ROW | DELL-SB2023-MIN | Dell Precision 3561 | 1.39.0
+ROW | DELL-SB2023-MIN | Dell Precision 3570 | 1.32.1
+ROW | DELL-SB2023-MIN | Dell Precision 3571 | 1.32.1
+ROW | DELL-SB2023-MIN | Dell Precision 3580 | 1.24.1
+ROW | DELL-SB2023-MIN | Dell Precision 3581 | 1.24.1
+ROW | DELL-SB2023-MIN | Dell Precision 3590 | 1.16.2
+ROW | DELL-SB2023-MIN | Dell Precision 3591 | 1.16.2
+ROW | DELL-SB2023-MIN | Dell Precision 3630 Tower | 2.37.0
+ROW | DELL-SB2023-MIN | Dell Precision 3640 | 1.41.0
+ROW | DELL-SB2023-MIN | Dell Precision 3650 Tower | 1.44.0
+ROW | DELL-SB2023-MIN | Dell Precision 3660 | 2.30.1
+ROW | DELL-SB2023-MIN | Dell Precision 3680 Tower | 1.18.2
+ROW | DELL-SB2023-MIN | Dell Precision 3930 Rack | 2.40.0
+ROW | DELL-SB2023-MIN | Dell Precision 5470 | 1.34.0
+ROW | DELL-SB2023-MIN | Dell Precision 5480 | 1.22.1
+ROW | DELL-SB2023-MIN | Dell Precision 5490 | 1.14.2
+ROW | DELL-SB2023-MIN | Dell Precision 5540 | 1.39.0
+ROW | DELL-SB2023-MIN | Dell Precision 5550 | 1.39.0
+ROW | DELL-SB2023-MIN | Dell Precision 5560 | 1.41.0
+ROW | DELL-SB2023-MIN | Dell Precision 5570 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell Precision 5680 | 1.23.1
+ROW | DELL-SB2023-MIN | Dell Precision 5690 | 1.15.1
+ROW | DELL-SB2023-MIN | Dell Precision 5750 | 1.37.0
+ROW | DELL-SB2023-MIN | Dell Precision 5760 | 1.37.0
+ROW | DELL-SB2023-MIN | Dell Precision 5770 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell Precision 5820 Tower | 2.46.0
+ROW | DELL-SB2023-MIN | Dell Precision 5860 Tower | 3.1.1
+ROW | DELL-SB2023-MIN | Dell Precision 7540 | 1.43.1
+ROW | DELL-SB2023-MIN | Dell Precision 7550 | 1.41.1
+ROW | DELL-SB2023-MIN | Dell Precision 7560 | 1.42.0
+ROW | DELL-SB2023-MIN | Dell Precision 7670 | 1.32.0
+ROW | DELL-SB2023-MIN | Dell Precision 7680 | 1.23.6
+ROW | DELL-SB2023-MIN | Dell Precision 7740 | 1.43.1
+ROW | DELL-SB2023-MIN | Dell Precision 7750 | 1.41.1
+ROW | DELL-SB2023-MIN | Dell Precision 7760 | 1.42.0
+ROW | DELL-SB2023-MIN | Dell Precision 7770 | 1.32.0
+ROW | DELL-SB2023-MIN | Dell Precision 7780 | 1.23.6
+ROW | DELL-SB2023-MIN | Dell Precision 7820 Tower | 2.50.0
+ROW | DELL-SB2023-MIN | Dell Precision 7865 Tower | 1.21.1
+ROW | DELL-SB2023-MIN | Dell Precision 7875 Tower | 2.2.1
+ROW | DELL-SB2023-MIN | Dell Precision 7920 Tower | 2.50.0
+ROW | DELL-SB2023-MIN | Dell Precision 7920 Rack | 2.25.1
+ROW | DELL-SB2023-MIN | Dell Precision 7920 XL Rack | 2.25.1
+ROW | DELL-SB2023-MIN | Dell Precision 7960 Tower | 2.13.1
+ROW | DELL-SB2023-MIN | Dell Precision 7960 Rack | 2.8.3
+ROW | DELL-SB2023-MIN | Dell Precision 7960 XL Rack | 2.8.3
+ROW | DELL-SB2023-MIN | Dell Vostro 3020 Small Desktop | 1.29.1
+ROW | DELL-SB2023-MIN | Dell Vostro 3020 Tower Desktop | 1.29.1
+ROW | DELL-SB2023-MIN | Dell Vostro 3030 | 1.19.1
+ROW | DELL-SB2023-MIN | Dell Vostro 3030S | 1.19.1
+ROW | DELL-SB2023-MIN | Dell Vostro 3690 | 1.37.0
+ROW | DELL-SB2023-MIN | Dell Vostro 3710 | 1.34.1
+ROW | DELL-SB2023-MIN | Dell Vostro 3890 | 1.37.0
+ROW | DELL-SB2023-MIN | Dell Vostro 3910 | 1.34.1
+ROW | DELL-SB2023-MIN | Dell Vostro 14 3420 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell Vostro 14 3425 | 1.31.1
+ROW | DELL-SB2023-MIN | Dell Vostro 14 3430 | 1.23.2
+ROW | DELL-SB2023-MIN | Dell Vostro 14 3435 | 1.24.1
+ROW | DELL-SB2023-MIN | Dell Vostro 14 3440 | 1.15.1
+ROW | DELL-SB2023-MIN | Dell Vostro 14 5410 | 2.37.0
+ROW | DELL-SB2023-MIN | Dell Vostro 15 3510 | 1.40.0
+ROW | DELL-SB2023-MIN | Dell Vostro 15 3515 | 1.36.1
+ROW | DELL-SB2023-MIN | Dell Vostro 15 3520 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell Vostro 15 3525 | 1.31.1
+ROW | DELL-SB2023-MIN | Dell Vostro 15 3530 | 1.23.2
+ROW | DELL-SB2023-MIN | Dell Vostro 15 3535 | 1.24.1
+ROW | DELL-SB2023-MIN | Dell Vostro 15 5510 | 2.37.0
+ROW | DELL-SB2023-MIN | Dell Vostro 16 5630 | 1.24.1
+ROW | DELL-SB2023-MIN | Dell Vostro 16 5635 | 1.18.0
+ROW | DELL-SB2023-MIN | Dell Vostro 16 5640 | 1.15.1
+ROW | DELL-SB2023-MIN | Dell Vostro 3400 | 1.41.0
+ROW | DELL-SB2023-MIN | Dell Vostro 3401 | 1.41.0
+ROW | DELL-SB2023-MIN | Dell Vostro 3405 | 1.35.1
+ROW | DELL-SB2023-MIN | Dell Vostro 3500 | 1.41.0
+ROW | DELL-SB2023-MIN | Dell Vostro 3501 | 1.41.0
+ROW | DELL-SB2023-MIN | Dell Vostro 5320 | 1.28.0
+ROW | DELL-SB2023-MIN | Dell Vostro 5415 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell Vostro 5515 | 1.30.0
+ROW | DELL-SB2023-MIN | Dell Vostro 5620 | 1.31.0
+ROW | DELL-SB2023-MIN | Dell Vostro 5625 | 1.24.0
+ROW | DELL-SB2023-MIN | Dell Vostro 7620 | 1.32.0
+ROW | DELL-SB2023-MIN | Dell Wyse 5070 | 1.38.0
+ROW | DELL-SB2023-MIN | Dell Wyse 5470 | 1.32.0
+ROW | DELL-SB2023-MIN | Dell Wyse 5470 All-In-One | 1.33.0
+ROW | DELL-SB2023-MIN | Dell XPS 13 9305 | 1.33.0
+ROW | DELL-SB2023-MIN | Dell XPS 13 9310 | 3.34.0
+ROW | DELL-SB2023-MIN | Dell XPS 13 9315 | 1.32.0
+ROW | DELL-SB2023-MIN | Dell XPS 13 9340 | 1.19.0
+ROW | DELL-SB2023-MIN | Dell XPS 13 9345 | 2.0.9
+ROW | DELL-SB2023-MIN | Dell XPS 13 Plus 9320 | 2.24.1
+ROW | DELL-SB2023-MIN | Dell XPS 14 9440 | 1.17.0
+ROW | DELL-SB2023-MIN | Dell XPS 15 9500 | 1.39.0
+ROW | DELL-SB2023-MIN | Dell XPS 15 9510 | 1.41.0
+ROW | DELL-SB2023-MIN | Dell XPS 15 9520 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell XPS 15 9530 | 1.25.1
+ROW | DELL-SB2023-MIN | Dell XPS 16 9640 | 1.17.0
+ROW | DELL-SB2023-MIN | Dell XPS 17 9710 | 1.37.0
+ROW | DELL-SB2023-MIN | Dell XPS 17 9720 | 1.35.0
+ROW | DELL-SB2023-MIN | Dell XPS 17 9730 | 1.22.1
+ROW | DELL-SB2023-MIN | Dell XPS 8950 | 1.29.0
+ROW | DELL-SB2023-MIN | Dell XPS 8960 | 2.20.1
+ROW | DELL-SB2023-MIN | Dell XPS 9315 2-in-1 | 1.25.0
+ROW | DELL-SB2023-MIN | Dell XPS 9320 | 2.24.1

@@ -1,0 +1,230 @@
+# TechDiag - vendor-verified cases (M7 K6, ruling 54 / D105). Made By Tzahi Bocal.
+# DATA, not built in: its place is <home>\TechDiag\Knowledge\RULES-VENDOR.txt, beside the organization's own
+# RULES.txt (M7 K6b - never copy it into RULES.txt: an older TechDiag refuses a whole file with a SOURCE or REVIEW
+# line or a ';', and never opens this file). The knowledge pack ships it; a rule of RULES.txt with the same id wins.
+# The architect turns a rule on after a back-test with TECHDIAG /knowledge.
+# The format: v4/spec/v4new/RULES-FORMAT.md (K6: IN, the version operators, SOURCE, REVIEW). Every rule is ALSO
+# and CANDIDATE: "this PC is on the vendor's affected list", never "this is the cause".
+# Every number is taken from research_notes/<the research of 12/11/2026>/ - the note is named above each rule.
+DATE | 14/11/2026
+
+# HP ish_14914515-14914500-16 (hp_ish_14914515_first_hand.md, read first-hand by the architect 12/11/2026): all HP
+# commercial notebooks, desktops and workstations, Windows 11 23H2 / 24H2 / 25H2, after the BIOS updates of early
+# April 2026 - a BitLocker recovery screen at every start; the 2023 certificates failed when UEFICA2023Status stays
+# "In Progress" AND UEFICA2023Error is higher than 0. The fixtures of this project write the status "InProgress",
+# HP's page "In Progress" - both are taken. pc.maker of HP PCs is "HP" (the fixtures, SystemManufacturer).
+# B14-1 (rulings 58, 59): HP's range is "BIOS updates released in early April 2026". HP's own BIOS list dates a
+# build about a month before its release (the 630 G11: 01.09.01 dated 03/03/2026, the next one 04/05/2026), so the
+# rule takes a BIOS dated 01/03/2026 or later: an older BIOS is outside what HP stated, a BIOS date that was not
+# read leaves the rule not read. The words behind each condition: EVIDENCE.txt.
+RULE | HP-BL-APR26 | ALSO | CANDIDATE | 12/11/2026 | HP: the 2023 Secure Boot certificates did not finish on this PC - it may ask for the BitLocker key at every start. | In the BIOS (F10 at power-on, Security, Secure Boot Configuration) turn on the four 2023 certificate settings. | the HP BitLocker key check - not read:
+NOTE | HP-BL-APR26 | HP lists this for its commercial PCs after its BIOS updates of early April 2026 (Windows 11 23H2, 24H2, 25H2).
+WHEN | HP-BL-APR26 | pc.maker | IS | HP
+WHEN | HP-BL-APR26 | bios.date | GE | 2026-03-01
+WHEN | HP-BL-APR26 | secure_boot.ca2023_status | IN | InProgress; In Progress
+WHEN | HP-BL-APR26 | secure_boot.ca2023_error | GT | 0
+SOURCE | HP-BL-APR26 | HP | ish_14914515-14914500-16 | 11/05/2026 | https://support.hp.com/us-en/document/ish_14914515-14914500-16
+REVIEW | HP-BL-APR26 | 12/05/2027
+
+# Dell KB 000299965, version 7, last modified 22/05/2026 (dell_advisories.md, case 1): Latitude and Precision stuck in
+# a boot loop after a BIOS update when Intel TME and Intel TXT (BIOS settings - not read by TechDiag) and Windows
+# SystemGuard Secure Launch are all on. Dell lists the bad BIOS versions one by one (not a range), so each rule takes
+# its list with IN; the four models that share one list are one rule, the four with lists of their own one rule each.
+# The model texts are Dell's names in the KB with "Dell " in front (pc.model = the maker's first word + the product).
+# M7 K6b: Dell's own catalog names the 3591 "Precision 3591" (no "Mobile") - both names are taken.
+# The link is the KB's bare-number form (the note: "Dell accepts the bare number as well") - it fits one line of /knowledge.
+RULE | DELL-SL-BIOS | ALSO | CANDIDATE | 12/11/2026 | Dell: this model and BIOS are on Dell's list of a boot loop with Secure Launch on - fixed in BIOS 1.15.1. | Update the BIOS to 1.15.1 or later. | the Dell boot loop list - not read:
+NOTE | DELL-SL-BIOS | Dell lists this with Intel TME and Intel TXT on in the BIOS - TechDiag does not read those settings.
+WHEN | DELL-SL-BIOS | pc.model | IN | Dell Latitude 5450; Dell Latitude 5550; Dell Mobile Precision 3591; Dell Precision 3591; Dell Precision 3590
+WHEN | DELL-SL-BIOS | bios.version | IN | 1.13.0; 1.14.0; 1.14.1
+WHEN | DELL-SL-BIOS | secure_launch.on | IS | yes
+SOURCE | DELL-SL-BIOS | Dell | 000299965 | 22/05/2026 | https://www.dell.com/support/kbdoc/en-us/000299965
+REVIEW | DELL-SL-BIOS | 12/05/2027
+
+RULE | DELL-SL-5350 | ALSO | CANDIDATE | 12/11/2026 | Dell: this model and BIOS are on Dell's list of a boot loop with Secure Launch on - fixed in BIOS 1.14.1. | Update the BIOS to 1.14.1 or later. | the Dell boot loop list - not read:
+NOTE | DELL-SL-5350 | Dell lists this with Intel TME and Intel TXT on in the BIOS - TechDiag does not read those settings.
+WHEN | DELL-SL-5350 | pc.model | IN | Dell Latitude 5350
+WHEN | DELL-SL-5350 | bios.version | IN | 1.10.2; 1.11.1; 1.12.0; 1.13.1
+WHEN | DELL-SL-5350 | secure_launch.on | IS | yes
+SOURCE | DELL-SL-5350 | Dell | 000299965 | 22/05/2026 | https://www.dell.com/support/kbdoc/en-us/000299965
+REVIEW | DELL-SL-5350 | 12/05/2027
+
+RULE | DELL-SL-7350 | ALSO | CANDIDATE | 12/11/2026 | Dell: this model and BIOS are on Dell's list of a boot loop with Secure Launch on - fixed in BIOS 1.12.1. | Update the BIOS to 1.12.1 or later. | the Dell boot loop list - not read:
+NOTE | DELL-SL-7350 | Dell lists this with Intel TME and Intel TXT on in the BIOS - TechDiag does not read those settings.
+WHEN | DELL-SL-7350 | pc.model | IN | Dell Latitude 7350 Detachable
+WHEN | DELL-SL-7350 | bios.version | IN | 1.8.1; 1.9.1; 1.10.0; 1.11.0
+WHEN | DELL-SL-7350 | secure_launch.on | IS | yes
+SOURCE | DELL-SL-7350 | Dell | 000299965 | 22/05/2026 | https://www.dell.com/support/kbdoc/en-us/000299965
+REVIEW | DELL-SL-7350 | 12/05/2027
+
+RULE | DELL-SL-7450 | ALSO | CANDIDATE | 12/11/2026 | Dell: this model and BIOS are on Dell's list of a boot loop with Secure Launch on - fixed in BIOS 1.14.1. | Update the BIOS to 1.14.1 or later. | the Dell boot loop list - not read:
+NOTE | DELL-SL-7450 | Dell lists this with Intel TME and Intel TXT on in the BIOS - TechDiag does not read those settings.
+WHEN | DELL-SL-7450 | pc.model | IN | Dell Latitude 7450
+WHEN | DELL-SL-7450 | bios.version | IN | 1.8.1; 1.9.0; 1.10.2; 1.11.1; 1.12.3; 1.13.0
+WHEN | DELL-SL-7450 | secure_launch.on | IS | yes
+SOURCE | DELL-SL-7450 | Dell | 000299965 | 22/05/2026 | https://www.dell.com/support/kbdoc/en-us/000299965
+REVIEW | DELL-SL-7450 | 12/05/2027
+
+RULE | DELL-SL-9450 | ALSO | CANDIDATE | 12/11/2026 | Dell: this model and BIOS are on Dell's list of a boot loop with Secure Launch on - fixed in BIOS 1.13.1. | Update the BIOS to 1.13.1 or later. | the Dell boot loop list - not read:
+NOTE | DELL-SL-9450 | Dell lists this with Intel TME and Intel TXT on in the BIOS - TechDiag does not read those settings.
+WHEN | DELL-SL-9450 | pc.model | IN | Dell Latitude 9450 2-in-1
+WHEN | DELL-SL-9450 | bios.version | IN | 1.8.0; 1.9.1; 1.10.1; 1.11.1; 1.12.1
+WHEN | DELL-SL-9450 | secure_launch.on | IS | yes
+SOURCE | DELL-SL-9450 | Dell | 000299965 | 22/05/2026 | https://www.dell.com/support/kbdoc/en-us/000299965
+REVIEW | DELL-SL-9450 | 12/05/2027
+
+# Dell KB 000130117 "How to Generate a Battery Report Using the POWERCFG Command", version 13, last modified
+# 12/10/2026 (read first-hand in the browser on 13/11/2026, K8; excerpt evidence/dell-000130117.txt): "If Full Charge
+# Capacity is below 40% of Design Capacity, the battery is significantly degraded and should be replaced."
+# battery.capacity_pct is full charge capacity x 100 / design capacity, cut down to a whole number (ts_win.c), so
+# LT 40 is exactly Dell's "below 40%". pc.maker of a Dell PC is "Dell Inc." (SystemManufacturer, the samples of the
+# DELL-SL rules). Dell's line is a vendor criterion, not a measured predictor.
+# K11 ruling 2 (13/11/2026): the battery is read in Windows mode only, so the rule asks where the run is (the fact
+# environment - read in every mode): in Recovery and WinPE the rule is read and does not hold, and prints nothing (no
+# Not checked line that tells nothing on every Dell). That condition is our own scope, not Dell's words - SCOPE in
+# EVIDENCE.txt. Beside the built-in battery line (below 50 percent: "The battery holds N% of its original charge.",
+# step "Replace the battery."), which gives the number from the same reading, this line gives Dell's own criterion.
+RULE | DELL-BATT-40 | ALSO | CANDIDATE | 13/11/2026 | Dell: the battery holds less than 40 percent of its original charge - Dell says to replace it. | Replace the battery. | the Dell battery check - not read:
+NOTE | DELL-BATT-40 | Dell: below 40 percent of the original charge the battery is badly worn and should be replaced.
+NOTE | DELL-BATT-40 | Checked only when TechDiag runs in Windows - the battery is not read in Recovery or WinPE.
+WHEN | DELL-BATT-40 | pc.maker | IS | Dell Inc.
+WHEN | DELL-BATT-40 | battery.capacity_pct | LT | 40
+WHEN | DELL-BATT-40 | environment | IS | Windows
+SOURCE | DELL-BATT-40 | Dell | 000130117 | 12/10/2026 | https://www.dell.com/support/kbdoc/en-us/000130117
+REVIEW | DELL-BATT-40 | 12/10/2027
+
+
+# K13 phase 2 (K11b part B, 13/11/2026) - the architect's picks 1-4 of qa/tasks/k13-vendor-criteria.md, from the
+# research of 13/11/2026 (research_notes/vendor-criteria-2026-11-13/, read first-hand). Every rule ALSO + CANDIDATE;
+# the words behind every condition: EVIDENCE.txt; the excerpts: evidence/.
+
+# Dell KB 000143245 "NVMe SSD Guide", version 23, last modified 12/10/2026 (dell-000143245-nvme-faq.md): "Critical
+# Warning - A simple pass/fail indicator. Any number higher than 0 is urgent, back up your data now and consider
+# replacing the drive." disk.warning is the Critical Warning byte of the NVMe health log of the disk that holds Windows
+# (STO1), read only for an NVMe disk - so the rule asks that the disk is NVMe (Dell's page is about NVMe disks; a SATA
+# disk is read and not NVMe, and the rule says nothing instead of a Not checked line on every Dell with a SATA disk).
+# Not Dell's words: a warning of temperature ALONE (the value 2, bit 1) is left out - the architect's STO1 round 2
+# ruling 3 (temperature does not predict failure), so this line never speaks where the built-in disk line is silent.
+# Beside the built-in ALSO SEEN line of the same reading ("The Windows disk warns: ... - back up the data."), this line
+# gives Dell's own criterion: urgent, and consider replacing the disk.
+RULE | DELL-DISK-WARN | ALSO | CANDIDATE | 13/11/2026 | Dell: a warning raised by the disk itself is urgent - Dell says to consider replacing the disk. | Back up the data, then consider replacing the disk. | the Dell disk warning check - not read:
+NOTE | DELL-DISK-WARN | Dell counts any warning of an NVMe disk as urgent. A warning of temperature alone is not counted here.
+WHEN | DELL-DISK-WARN | pc.maker | IS | Dell Inc.
+WHEN | DELL-DISK-WARN | disk.bus | IS | NVMe
+WHEN | DELL-DISK-WARN | disk.warning | GT | 0
+WHEN | DELL-DISK-WARN | disk.warning | NOT | 2
+SOURCE | DELL-DISK-WARN | Dell | 000143245 | 12/10/2026 | https://www.dell.com/support/kbdoc/en-us/000143245
+REVIEW | DELL-DISK-WARN | 12/10/2027
+
+# HP ish_7041771-7042020-16 "HP Notebook PCs - 601 or 60X error is displayed on a black screen" (no date or version on
+# the page; the SOURCE date is the day it was read, 13/11/2026; hp-ish_7041771-battery-601.md, read in the browser):
+# "the measured storage capacity of the primary (internal) battery is less than 25% of the original storage capacity."
+# battery.capacity_pct is full charge capacity x 100 / design capacity, cut to a whole number, so LT 25 is exactly
+# HP's "less than 25%"; HP's "original storage capacity" is read as the design capacity (a GAP line). The battery is
+# read in Windows mode only: the scope condition of K11 ruling 2 (SCOPE in EVIDENCE.txt). Beside the built-in battery
+# line (below 50 percent: "The battery holds N% of its original charge.", step "Replace the battery."), this line gives
+# HP's own threshold - the one of HP's alert 601 at start - and HP's words that a cold room can also cause it.
+RULE | HP-BATT-25 | ALSO | CANDIDATE | 13/11/2026 | HP: the battery holds less than 25 percent of its original charge - at this level an HP shows battery alert 601 at start. | Update the BIOS, then run the battery test of the HP hardware test (HP PC Hardware Diagnostics UEFI). | the HP battery check - not read:
+NOTE | HP-BATT-25 | HP: a cold room can also cause this. Using the PC in a warmer place for a while may clear it.
+NOTE | HP-BATT-25 | Checked only when TechDiag runs in Windows - the battery is not read in Recovery or WinPE.
+WHEN | HP-BATT-25 | pc.maker | IS | HP
+WHEN | HP-BATT-25 | battery.capacity_pct | LT | 25
+WHEN | HP-BATT-25 | environment | IS | Windows
+SOURCE | HP-BATT-25 | HP | ish_7041771-7042020-16 | 13/11/2026 | https://support.hp.com/us-en/document/ish_7041771-7042020-16
+REVIEW | HP-BATT-25 | 13/11/2027
+
+# Microsoft KB5016061 (the TPM-WMI events, last change 02/06/2026) and KB5053946 (the deployment guidance of
+# CVE-2023-24932, last change 10/06/2026) - ms-kb5016061-tpm-wmi-events.md, ms-kb5053946-...md: event 1037 is logged
+# when the Windows Production PCA 2011 certificate is added to the forbidden list (DBX); from then on "any boot
+# applications signed with this certificate will no longer be trusted", recovery media and PXE included, and the PC
+# "will not start from boot media that uses the older Windows boot manager and 2011 CA". It is about the technician's
+# own boot media on this PC: the step says to use up-to-date boot media in Microsoft's sense (the PCA2023 signed boot
+# manager on the media) and nothing about Secure Boot settings. boot_manager.revoked.event is the newest of 1037 and
+# 1042: a 1037 followed by a 1042 is not seen (a GAP line). Beside the built-in part 4 line of the same event ("Old
+# boot managers : revoked <date> - event 1037 - boot media with an older Windows (USB, DVD) may not start here"), this
+# line brings Microsoft's criterion and its step to the result (an ALSO SEEN line, on the screen too).
+# Dell 000483242 (USB boot after KB5089549) is not a source: its scope is the May 2026 update without the June fix,
+# and Microsoft's own page already names USB drives, ISO images and network boot images.
+RULE | SB-MEDIA-1037 | ALSO | CANDIDATE | 14/11/2026 | Microsoft: while Secure Boot is on, this PC no longer starts boot media signed with the old 2011 certificate (USB, ISO image, network start). | Use up-to-date boot media - its boot manager signed with the 2023 certificate. | the old boot media check - not read:
+NOTE | SB-MEDIA-1037 | Microsoft: event 1037 means the old 2011 boot certificate was blocked on this PC.
+WHEN | SB-MEDIA-1037 | boot_manager.revoked.event | IS | 1037
+SOURCE | SB-MEDIA-1037 | Microsoft | KB5016061 | 02/06/2026 | https://support.microsoft.com/en-us/kb/5016061
+SOURCE | SB-MEDIA-1037 | Microsoft | KB5053946 | 10/06/2026 | https://support.microsoft.com/en-us/servicing/os/windows/2025/02/enterprise-deployment-guidance-for-cve-2023-24932
+REVIEW | SB-MEDIA-1037 | 02/06/2027
+
+# Dell KB 000501425 "Systems Unable to Receive 2023 Secure Boot Key Exchange Key Updates Due to End of Service Life",
+# version 1, last modified 25/08/2026 (dell-000378734-and-000501425-no-2023-update.md, saved page read first-hand):
+# "There is no field update available to enable installation of the Microsoft 2023 KEK on the affected systems." and
+# "Evaluate platform replacement plans for impacted systems." With Microsoft's event 1803 (KB5016061: "A PK-signed Key
+# Exchange Key (KEK) cannot be found for this device.") on a model of Dell's list. Dell's list as data: the commercial
+# models (Latitude, OptiPlex, Precision) with "Dell " in front (pc.model = the maker's first word + the product); IN
+# takes at most 32 values, so four rules of one meaning. Left out - Dell marks them "(Legacy)" because a newer PC has
+# the same name, and pc.model cannot tell the two apart: Latitude 3330, 3340, 3440, 3450, 3550, 5450, 7350 2-in-1;
+# OptiPlex 7010, 7020 (each "(Legacy)" on Dell's list).
+# Beside the built-in Windows-mode finding of event 1803 ("the PC maker has not given the Secure Boot key (KEK) for
+# this model.", its step "Run UPDREPORT again after the next BIOS update."), this line gives Dell's word that no
+# update will come for these models. In Recovery and WinPE nothing else speaks of 1803 (K13 item 5).
+RULE | DELL-NOKEK-LAT1 | ALSO | CANDIDATE | 14/11/2026 | Dell: Dell has no update that gives this model the 2023 Secure Boot key (KEK). | Tell the IT team - Dell says to consider replacing this PC. | the Dell Secure Boot key list - not read:
+NOTE | DELL-NOKEK-LAT1 | Dell: the PC keeps working and keeps Secure Boot, and still gets the 2023 certificate updates.
+NOTE | DELL-NOKEK-LAT1 | Seen on this PC: the newest Secure Boot event is 1803 - no key from the PC maker.
+WHEN | DELL-NOKEK-LAT1 | pc.model | IN | Dell Latitude 13 3379 2 in 1 Laptop; Dell Latitude 3150; Dell Latitude 3160; Dell Latitude 3350; Dell Latitude 3460; Dell Latitude 3470; Dell Latitude 3560; Dell Latitude 3570; Dell Latitude 5175 2-in-1; Dell Latitude 5179 2-in-1; Dell Latitude 5250; Dell Latitude 5404 Rugged; Dell Latitude 5414 Rugged; Dell Latitude 6430; Dell Latitude 7202 Rugged Tablet; Dell Latitude 7204 Rugged; Dell Latitude 7214 Rugged Extreme; Dell Latitude 7275; Dell Latitude 7370; Dell Latitude 7404 Rugged; Dell Latitude 7414; Dell Latitude 7414 Rugged; Dell Latitude 7480; Dell Latitude E5250; Dell Latitude E5270; Dell Latitude E5430; Dell Latitude E5440; Dell Latitude E5450; Dell Latitude E5470; Dell Latitude E5530; Dell Latitude E5540; Dell Latitude E5550
+WHEN | DELL-NOKEK-LAT1 | tpm_wmi.last_event | IS | 1803
+SOURCE | DELL-NOKEK-LAT1 | Dell | 000501425 | 25/08/2026 | https://www.dell.com/support/kbdoc/en-us/000501425
+SOURCE | DELL-NOKEK-LAT1 | Microsoft | KB5016061 | 02/06/2026 | https://support.microsoft.com/en-us/kb/5016061
+REVIEW | DELL-NOKEK-LAT1 | 25/08/2027
+
+RULE | DELL-NOKEK-LAT2 | ALSO | CANDIDATE | 14/11/2026 | Dell: Dell has no update that gives this model the 2023 Secure Boot key (KEK). | Tell the IT team - Dell says to consider replacing this PC. | the Dell Secure Boot key list - not read:
+NOTE | DELL-NOKEK-LAT2 | Dell: the PC keeps working and keeps Secure Boot, and still gets the 2023 certificate updates.
+NOTE | DELL-NOKEK-LAT2 | Seen on this PC: the newest Secure Boot event is 1803 - no key from the PC maker.
+WHEN | DELL-NOKEK-LAT2 | pc.model | IN | Dell Latitude E5570; Dell Latitude E6230; Dell Latitude E6330; Dell Latitude E6430; Dell Latitude E6430s; Dell Latitude E6440; Dell Latitude E6530; Dell Latitude E6540; Dell Latitude E7240; Dell Latitude E7250; Dell Latitude E7270; Dell Latitude E7440; Dell Latitude E7450; Dell Latitude E7470
+WHEN | DELL-NOKEK-LAT2 | tpm_wmi.last_event | IS | 1803
+SOURCE | DELL-NOKEK-LAT2 | Dell | 000501425 | 25/08/2026 | https://www.dell.com/support/kbdoc/en-us/000501425
+SOURCE | DELL-NOKEK-LAT2 | Microsoft | KB5016061 | 02/06/2026 | https://support.microsoft.com/en-us/kb/5016061
+REVIEW | DELL-NOKEK-LAT2 | 25/08/2027
+
+RULE | DELL-NOKEK-OPTI | ALSO | CANDIDATE | 14/11/2026 | Dell: Dell has no update that gives this model the 2023 Secure Boot key (KEK). | Tell the IT team - Dell says to consider replacing this PC. | the Dell Secure Boot key list - not read:
+NOTE | DELL-NOKEK-OPTI | Dell: the PC keeps working and keeps Secure Boot, and still gets the 2023 certificate updates.
+NOTE | DELL-NOKEK-OPTI | Seen on this PC: the newest Secure Boot event is 1803 - no key from the PC maker.
+WHEN | DELL-NOKEK-OPTI | pc.model | IN | Dell OptiPlex 3010; Dell OptiPlex 3011; Dell OptiPlex 3020; Dell OptiPlex 3020M; Dell OptiPlex 3030 All In One; Dell OptiPlex 3040; Dell OptiPlex 3046; Dell OptiPlex 3050; Dell OptiPlex 3060; Dell OptiPlex 3240 All-in-One; Dell OptiPlex 390; Dell OptiPlex 5040; Dell OptiPlex 5050; Dell OptiPlex 7040; Dell OptiPlex 7050; Dell OptiPlex 7060; Dell OptiPlex 7440 AIO; Dell OptiPlex 9010; Dell OptiPlex 9010 All In One; Dell OptiPlex 9020; Dell OptiPlex 9020 All In One; Dell OptiPlex 9020M; Dell OptiPlex 9030 All In One; Dell OptiPlex 990; Dell OptiPlex XE2; Dell OptiPlex XE3
+WHEN | DELL-NOKEK-OPTI | tpm_wmi.last_event | IS | 1803
+SOURCE | DELL-NOKEK-OPTI | Dell | 000501425 | 25/08/2026 | https://www.dell.com/support/kbdoc/en-us/000501425
+SOURCE | DELL-NOKEK-OPTI | Microsoft | KB5016061 | 02/06/2026 | https://support.microsoft.com/en-us/kb/5016061
+REVIEW | DELL-NOKEK-OPTI | 25/08/2027
+
+RULE | DELL-NOKEK-PREC | ALSO | CANDIDATE | 14/11/2026 | Dell: Dell has no update that gives this model the 2023 Secure Boot key (KEK). | Tell the IT team - Dell says to consider replacing this PC. | the Dell Secure Boot key list - not read:
+NOTE | DELL-NOKEK-PREC | Dell: the PC keeps working and keeps Secure Boot, and still gets the 2023 certificate updates.
+NOTE | DELL-NOKEK-PREC | Seen on this PC: the newest Secure Boot event is 1803 - no key from the PC maker.
+WHEN | DELL-NOKEK-PREC | pc.model | IN | Dell Precision Tower 3420; Dell Precision Tower 3620; Dell Precision Tower 7810; Dell Precision Tower 5810; Dell Precision Tower 7910; Dell Precision 3510; Dell Precision 5510; Dell Precision 5720 AIO; Dell Precision 7510; Dell Precision 7710; Dell Precision M2800; Dell Precision M4700; Dell Precision M4800; Dell Precision M6700; Dell Precision M6800; Dell Precision T1650; Dell Precision T1700; Dell Precision T3610; Dell Precision T5610; Dell Precision T5810; Dell Precision T7610
+WHEN | DELL-NOKEK-PREC | tpm_wmi.last_event | IS | 1803
+SOURCE | DELL-NOKEK-PREC | Dell | 000501425 | 25/08/2026 | https://www.dell.com/support/kbdoc/en-us/000501425
+SOURCE | DELL-NOKEK-PREC | Microsoft | KB5016061 | 02/06/2026 | https://support.microsoft.com/en-us/kb/5016061
+REVIEW | DELL-NOKEK-PREC | 25/08/2027
+
+# K19 (qa/tasks/k19-bios-minimum-tables.md, 13/11/2026): the makers' minimum-BIOS tables for the 2023 Secure Boot
+# certificates, as data - Knowledge\TABLES.txt (tools/mk_biostables.py); a rule takes its compare value from a table
+# (TVLT, RULES-FORMAT.md 2a), and an older TechDiag counts these two rules as newer than itself. The makers forbid
+# copying their text: every line here is TechDiag's own words, names the maker, and the SOURCE line names the document.
+# HP ish_13070353-13070429-16 "HP Business PCs - Prepare for new Windows Secure Boot certificates" (no date or version on
+# the page; the SOURCE date is the day it was read, 13/11/2026; hp-ish_13070353-prepare-secure-boot-certificates.md):
+# HP lists the first BIOS update (the minimum version) per platform and BIOS family; without it, HP says, Windows
+# cumulative updates do not add the new certificates. The key is the BIOS family (bios.family: the HP form of the BIOS
+# string), so a BIOS of any other form (Dell's, a consumer HP's) is read and not in the table - nothing is said.
+RULE | HP-SB2023-BIOS | ALSO | CANDIDATE | 14/11/2026 | HP: this BIOS is older than (TABLE), the first HP lists for the 2023 Secure Boot certificates. | Update the BIOS to (TABLE) or later. | the HP minimum BIOS check - not read:
+NOTE | HP-SB2023-BIOS | HP: until the BIOS is updated, Windows updates do not add the 2023 Secure Boot certificates.
+NOTE | HP-SB2023-BIOS | HP: a PC that starts today can keep starting after the old certificates expire.
+WHEN | HP-SB2023-BIOS | bios.version | TVLT | HP-SB2023-MIN BY bios.family
+SOURCE | HP-SB2023-BIOS | HP | ish_13070353-13070429-16 | 13/11/2026 | https://support.hp.com/us-en/document/ish_13070353-13070429-16
+REVIEW | HP-SB2023-BIOS | 13/11/2027
+
+# Dell KB 000347876 "Microsoft 2011 Secure Boot Certificate Expiration", version 20, last modified 23/05/2026
+# (dell-000347876-full-min-bios-table.md, the whole table read in the browser on 13/11/2026): the minimum BIOS version
+# with the 2023 certificate per platform. Dell's table is about the DEFAULT Secure Boot database (what a reset of Secure
+# Boot puts back), not the active one Windows Update fills - the NOTE lines say so. The key is the model (pc.model:
+# "Dell " + Dell's platform name). Beside DELL-SL-BIOS (Latitude 5450, 5550, Precision 3590, 3591: "fixed in 1.15.1")
+# this line may show too with 1.16.2 - the higher one satisfies both (ruling 5 of the card).
+RULE | DELL-SB2023-BIOS | ALSO | CANDIDATE | 13/11/2026 | Dell: this BIOS is older than (TABLE), the first Dell lists with the 2023 Secure Boot certificates for this model. | Update the BIOS to (TABLE) or later. | the Dell minimum BIOS check - not read:
+NOTE | DELL-SB2023-BIOS | Dell: this is about the Secure Boot defaults kept in the BIOS. It does not stop the PC from starting.
+NOTE | DELL-SB2023-BIOS | It matters when Secure Boot is reset to its defaults.
+WHEN | DELL-SB2023-BIOS | bios.version | TVLT | DELL-SB2023-MIN BY pc.model
+SOURCE | DELL-SB2023-BIOS | Dell | 000347876 | 23/05/2026 | https://www.dell.com/support/kbdoc/en-us/000347876
+REVIEW | DELL-SB2023-BIOS | 23/05/2027

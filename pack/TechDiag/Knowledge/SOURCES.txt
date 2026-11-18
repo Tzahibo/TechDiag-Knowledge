@@ -1,0 +1,21 @@
+# SOURCES.txt - where TECHDIAG-UPDATE.exe takes the tables of the TechDiag list from. Made By Tzahi Bocal.
+# Its place: <home>\TechDiag\Knowledge\SOURCES.txt. It is data only - nothing in it is run. TECHDIAG-UPDATE.exe has
+# the same list built in and uses this file instead when its DATE is the same as, or newer than, the built-in one.
+# One line per source:
+#   SOURCE | <id> | <maker> | <https address> | <kind of page> | <the table of the list it fills>
+# The program reads only the kinds it knows, and asks only the makers' hosts it lists (learn.microsoft.com;
+# raw.githubusercontent.com only for Microsoft's own documentation repositories); any other line is not used.
+# A new source of a kind the program already reads is a new line here - no new program.
+# Use plain letters, digits, spaces and . , - _ / ( ) : + '  only.
+#
+# Where Microsoft keeps the same document as Markdown in its own public GitHub repository (licence CC BY 4.0), the
+# address is that file (ruling 80 e); the open specification [MS-ERREF] and the Windows Update page are read on
+# Learn, and of the Windows 11 release information (on Learn only) only facts are taken - a build and its KB.
+#
+DATE   | 13/11/2026
+SOURCE | ms-release-info   | Microsoft | https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information | ms-release-info | builds
+SOURCE | ms-wu-errors      | Microsoft | https://learn.microsoft.com/en-us/windows/deployment/update/windows-update-error-reference | ms-wu-errors | windows-update
+SOURCE | ms-bugcheck       | Microsoft | https://raw.githubusercontent.com/MicrosoftDocs/windows-driver-docs/staging/windows-driver-docs-pr/debugger/bug-check-code-reference2.md | ms-bugcheck | stop-codes
+SOURCE | ms-erref-win32    | Microsoft | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/18d8fbe8-a967-4f1c-ae50-99ca8e491d2d | ms-erref-win32 | win32
+SOURCE | ms-erref-ntstatus | Microsoft | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55 | ms-erref-ntstatus | ntstatus
+SOURCE | ms-erref-hresult  | Microsoft | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-erref/705fb797-2175-4a90-b5a3-3918024b10b8 | ms-erref-hresult | hresult
