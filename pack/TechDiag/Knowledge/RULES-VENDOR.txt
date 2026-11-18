@@ -6,7 +6,7 @@
 # The format: v4/spec/v4new/RULES-FORMAT.md (K6: IN, the version operators, SOURCE, REVIEW). Every rule is ALSO
 # and CANDIDATE: "this PC is on the vendor's affected list", never "this is the cause".
 # Every number is taken from research_notes/<the research of 12/11/2026>/ - the note is named above each rule.
-DATE | 18/11/2026
+DATE | 14/11/2026
 
 # HP ish_14914515-14914500-16 (hp_ish_14914515_first_hand.md, read first-hand by the architect 12/11/2026): all HP
 # commercial notebooks, desktops and workstations, Windows 11 23H2 / 24H2 / 25H2, after the BIOS updates of early
@@ -228,17 +228,3 @@ NOTE | DELL-SB2023-BIOS | It matters when Secure Boot is reset to its defaults.
 WHEN | DELL-SB2023-BIOS | bios.version | TVLT | DELL-SB2023-MIN BY pc.model
 SOURCE | DELL-SB2023-BIOS | Dell | 000347876 | 23/05/2026 | https://www.dell.com/support/kbdoc/en-us/000347876
 REVIEW | DELL-SB2023-BIOS | 23/05/2027
-
-# Dell KB 000385611, version 3, last modified 24/05/2026 (read first-hand 18/11/2026, evidence/dell-000385611.txt;
-# found by the night watch, verified by the architect): seven Dell Pro laptops of 2025, Windows 11 with BitLocker -
-# the recovery key is asked at every start after a computer password was set or BIOS settings were changed while
-# BitLocker was locked. Dell's cause: the pre-boot Bluetooth feature changes the measured start (PCR), so the key
-# no longer matches. Dell's fix is a BIOS setting, not an update. TechDiag cannot read what was changed in the BIOS,
-# so the rule holds on Dell's models when the Windows drive is locked at the start of a Recovery run - the state a
-# technician meets on such a PC. In Windows mode bitlocker.locked is not read, and the rule stays not read.
-RULE | DELL-BL-PRO25 | ALSO | CANDIDATE | 18/11/2026 | Dell: on this model BitLocker can ask for the recovery key at every start after a password or BIOS change. | In the BIOS (F2 at power-on): turn on Advanced Setup, open Connection, turn off Enable UEFI Bluetooth Stack. The key may be asked one more time. | the Dell BitLocker and Bluetooth list - not read:
-NOTE | DELL-BL-PRO25 | Dell lists this for Windows 11 with BitLocker, after a computer password was set or BIOS settings were changed.
-WHEN | DELL-BL-PRO25 | pc.model | IN | Dell Pro 13 Plus PB13250; Dell Pro 13 Premium PA13250; Dell Pro 14 Plus PB14250; Dell Pro 14 Premium PA14250; Dell Pro 16 Plus PB16250; Dell Pro Max 14 MC14250; Dell Pro Max 16 MC16250
-WHEN | DELL-BL-PRO25 | bitlocker.locked | IS | yes
-SOURCE | DELL-BL-PRO25 | Dell | 000385611 | 24/05/2026 | https://www.dell.com/support/kbdoc/en-us/000385611
-REVIEW | DELL-BL-PRO25 | 24/05/2027

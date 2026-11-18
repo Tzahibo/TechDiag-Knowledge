@@ -12,7 +12,7 @@
 # The code, the part it points to and the maker's step are the makers' facts. Every sentence is TechDiag's own
 # words - the makers' terms forbid copying their text. Two tables are never merged: a code in two tables is
 # shown under each table's own title (the model generation matters).
-DATE | 18/11/2026
+DATE | 13/11/2026
 
 TABLE | DELL-EPSA | Dell | TEST | Dell hardware test codes (ePSA and PSA) | Dell PCs with Dell's pre-boot hardware test - Dell's list names OptiPlex, Inspiron, Vostro, XPS, Alienware, Dell Pro and more | 000181167 | 25 | 03/09/2026 | https://www.dell.com/support/kbdoc/en-us/000181167
 NOTE | DELL-EPSA | Still the same code after these steps: enter it on Dell's online test page.
@@ -104,43 +104,6 @@ CODE | DELL-EPSA | 2000-0723 | The BIOS found a disk problem. | Check the disk's
 CODE | DELL-EPSA | 2000-0800 | No response from the touchscreen. | Restart. Update the BIOS, then run the test again.
 CODE | DELL-EPSA | 2000-0901 | No response from the fingerprint reader. | Update the BIOS and the fingerprint driver, then test again.
 CODE | DELL-EPSA | 2000-0941 | No response from the smart card reader. | Update the BIOS and the smart card driver, then test again.
-
-TABLE | DELL-EPSA-8 | Dell | TEST | Dell hardware test codes, the 2000-8NNN series (ePSA) | Dell PCs with Dell's pre-boot hardware test - the codes of the test program itself, the fan, the charger and PCIe | 000181162 | 11 | 03/09/2026 | https://www.dell.com/support/kbdoc/en-us/000181162
-NOTE | DELL-EPSA-8 | Still the same code after these steps: enter it on Dell's online test page.
-NOTE | DELL-EPSA-8 | Left out: codes of servers, tape drives, ARM tablets and old BIOS.
-CODE | DELL-EPSA-8 | 2000-8002 | The heat sensor reads too high. | Update the BIOS. Clean the air vents, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8003 | The test could not control the fan (a BIOS matter). | Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8004 | The test could not read the fan speed (a BIOS matter). | Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8005 | The fan turns slower than it should. | Update the BIOS. Clean the air vents, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8006 | The fan did not reach the speed the test asked for. | Update the BIOS. Clean the air vents, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8007 | Information only: the test's log holds fan events. | Clear the test's log.
-CODE | DELL-EPSA-8 | 2000-8008 | The test program ran out of memory - the PC may be unstable. | Restart the PC. Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8009 | The test program lost track of its memory - restart the PC. | Restart the PC. Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8010 | A timer of the system board was not found. | Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8011 | A USB device gave the BIOS a wrong answer. | Reconnect the USB device. Update the BIOS, then test again.
-CODE | DELL-EPSA-8 | 2000-8012 | The test program's own error (an unknown test or value). | Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8014 | An extra test module failed - the message names the device. | Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8015 | The test could not stop the other cores - the PC may be unstable. | Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8016 | The battery's health could not be read. | Reseat the battery. Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8017 | The BIOS does not report battery health (an optional feature). | Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8018 | The test program's own error (two results) - may be unstable. | Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8019 | The test could not write its log - the PC may be unstable. | Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8020 | The test program is low on memory - the PC may be unstable. | Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8021 | The memory the BIOS lists is not what the test found. | Update the BIOS, restart the PC, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8022 | The liquid cooling fan was not found. | Update the BIOS. Clean the air vents, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8115 | The test could not stop the other cores - the PC may be unstable. | Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8135 | The charger was not found. | Update the BIOS. Reconnect the charger at both ends, test again.
-CODE | DELL-EPSA-8 | 2000-8136 | The charger is connected when the test asked to take it off. | Disconnect the charger, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8137 | The charger gives no power. | Check it is plugged in. Update the BIOS. Reconnect the charger.
-CODE | DELL-EPSA-8 | 2000-8138 | The charger's type and power cannot be read - may not charge. | Update the BIOS. Reconnect the charger. Use a Dell charger.
-CODE | DELL-EPSA-8 | 2000-8165 | The disk's start code (MBR) is not a known one - maybe a virus. | Update and run the antivirus. Update or reinstall Windows.
-CODE | DELL-EPSA-8 | 2000-8166 | The test found a virus. | Update and run the antivirus.
-CODE | DELL-EPSA-8 | 2000-8170 | A PCIe card connects at less than its full width. | Reseat the PCIe card, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8171 | A PCIe card is there but does not answer (the slot is named). | Reseat the PCIe card, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8172 | A PCIe card connects at a low speed. | Reseat the PCIe card, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8338 | A UEFI driver of the BIOS changed a device's setting. | Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8415 | The test program's own error (nothing to test) - not hardware. | Update the BIOS, then run the test again.
-CODE | DELL-EPSA-8 | 2000-8611 | The speaker tones were not heard. | Unplug the audio jacks. Reseat the speaker connector, test again.
 
 TABLE | DELL-LAT-LIGHT | Dell | LIGHT | Dell Latitude laptops - battery light, amber then white blinks | Latitude laptops, models Dell ships now (Dell's page also names its Dell Pro laptops) | 000131044 | 16 | 28/10/2026 | https://www.dell.com/support/kbdoc/en-us/000131044
 NOTE | DELL-LAT-LIGHT | First number: amber blinks. Second number: white blinks.
