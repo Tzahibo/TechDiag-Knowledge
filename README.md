@@ -17,3 +17,11 @@ What is never in it: anything of an organization - no PC names, users, serial nu
 
 Lines under "added by the night watch" in the list were found and checked by an automatic nightly job: each is a
 CHECK (never a PROBLEM) with the update Microsoft names as the fix.
+
+## The program
+
+TechDiag itself - the program, its versions and how to run it - is in the repository `Tzahibo/TechDiag`
+(private): its Releases page holds every version. This pack was checked with TechDiag 4.0.1.
+
+**בעברית:** כאן נמצאת תמיד חבילת הידע החדשה ביותר של TechDiag. מורידים את קובץ ה-zip, שמים אותו בתיקייה
+`TechDiag\Knowledge\Packs` שעל ה-USB ומריצים את `Update\TECHDIAG-UPDATE.exe`.
